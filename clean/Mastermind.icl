@@ -9,7 +9,7 @@ matches :: [Int] [Int] -> Int
 matches a b = 0
 
 readCode :: String -> Maybe [Int]
-readCode str = parsedListValidator [digitToInt i \\ i <- fromString str | isDigit i]
+readCode str = parsedListValidator [digitToInt c \\ c <- fromString str | isDigit c]
 where
 	parsedListValidator :: [Int] -> Maybe [Int]
 	parsedListValidator xs
@@ -23,4 +23,4 @@ allMatches :: [Int] String -> (Int, Int)
 allMatches a b = (0,0)
 
 //Start = positionalMatches [4,2,7,1] [1,2,3,4]
-Start = readCode "1952"
+Start = readCode "1922"
