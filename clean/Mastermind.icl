@@ -17,7 +17,8 @@ where
 	| otherwise = Nothing
 
 maybe :: (a -> b) b (Maybe a) -> b
-maybe f b x = b
+maybe f b Nothing = b
+maybe f b (Just x) = f x
 
 allMatches :: [Int] String -> (Int, Int)
 allMatches a b = (0,0)
