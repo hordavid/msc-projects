@@ -28,6 +28,6 @@ maybe f b Nothing = b
 maybe f b (Just x) = f x
 
 allMatches :: [Int] String -> (Int, Int)
-allMatches a b = (0,0)
+allMatches a b = (matches a (maybe (sort) [] (readCode b)) - positionalMatches a (maybe (sort) [] (readCode b)), positionalMatches a (maybe (sort) [] (readCode b)))
 
-Start = allMatches [4,2,7,1] "1234"
+Start = allMatches [9,3,0,5] "123a"
