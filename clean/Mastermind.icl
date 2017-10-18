@@ -5,11 +5,15 @@ import StdEnv, StdLib
 positionalMatches :: [Int] [Int] -> Int
 positionalMatches xs ys = length [(x,y) \\ x <- xs & y <- ys | x==y]
 
-matches :: [Int] [Int] -> [(Int,Int)]
-matches a b = [(x,y) \\ x <- normalize a, y <- b | x==y]
+matches :: [Int] [Int] -> Int
+matches a b = checker (sort a) (sort b) 0
 where
-	normalize :: [Int] -> [Int]
-	normalize [x:xs] = [x \\ y <- xs | x<>y]
+	checker :: [Int] [Int] Int -> Int
+	checker xs ys cntr
+		| isEmpty xs || isEmpty ys = cntr
+		| hd xs == hd ys = checker (removeAt 0 xs) (removeAt 0 ys) (inc cntr)
+		| hd xs < hd ys = checker (removeAt 0 xs) ys cntr
+		| hd xs > hd ys = checker xs (removeAt 0 ys) cntr
 
 readCode :: String -> Maybe [Int]
 readCode str = validator [digitToInt c \\ c <- fromString str | isDigit c]
@@ -26,4 +30,4 @@ maybe f b (Just x) = f x
 allMatches :: [Int] String -> (Int, Int)
 allMatches a b = (0,0)
 
-Start = positionalMatches [6,6,6,1] [6,6,5,1]
+Start = allMatches [4,2,7,1] "1234"
