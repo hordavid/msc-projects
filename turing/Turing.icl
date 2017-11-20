@@ -7,45 +7,46 @@ import StdEnv, StdLib, StdGeneric, GenEq
 derive gEq Zipper
 
 fromList :: [a] -> Zipper a
-fromList a = Z [] a
+fromList xs = Z [] xs
 
 read :: (Zipper a) -> a
-read (Z a b) = hd b
+read (Z xs ys) = hd ys
 
 write :: a (Zipper a) -> Zipper a
-write a (Z b c) = (Z b (insertAt 0 a (removeAt 0 c))) 
+write a (Z xs ys) = (Z xs (insertAt 0 a (removeAt 0 ys))) 
 
 :: Movement = Forward | Backward | Stay
 
+derive gEq Movement
+
 move :: Movement (Zipper a) -> Zipper a
-move Stay (Z a b) = (Z a b)
-move Forward (Z a b) = (Z (insertAt 0 (hd b) a) (removeAt 0 b))
-move Backward (Z a b) = (Z (removeAt 0 a) (insertAt 0 (hd a) b))
-//move m (Z a b)
-	//| m == Stay = (Z a b)
-	//| m == Forward && length b > 0 = (Z (insertAt 0 (hd b) a) (removeAt 0 b))
-	//| m == Backward && length a > 0 = (Z (removeAt 0 a) (insertAt 0 (hd a) b))
-	//| otherwise = (Z a b)
+move m (Z xs ys)
+	//| m === Stay = (Z xs ys)
+	| m === Forward && length ys > 0 = (Z (insertAt 0 (hd ys) xs) (removeAt 0 ys))
+	| m === Backward && length xs > 0 = (Z (removeAt 0 xs) (insertAt 0 (hd xs) ys))
+	| otherwise = (Z xs ys)
 
 around :: Int (Zipper a) -> [a]
-around a (Z b c) = (reverse (take a b)) ++ (take (inc a) c)
+around a (Z xs ys) = reverse (take a xs) ++ take (inc a) ys
 
 fromListInf :: a [a] -> Zipper a
-fromListInf a b = abort "not defined"
+fromListInf a xs = (Z (repeat a) (xs ++ repeat a))
 
 class Machine t where
   done :: (t a) -> Bool
   tape :: (t a) -> Zipper a
   step :: (t a) -> t a
 
-:: State = Something2
+:: State = InState Int | Accepted | Rejected
 
-:: TuringMachine a = Something3
+derive gEq State
+
+:: TuringMachine a = TM State (Zipper a) (Int a -> (State, a, Movement))
 
 instance Machine TuringMachine where
-  done a = abort "undefined"
-  tape a = abort "undefined"
-  step a = abort "undefined"
+  done (TM st zipper f) = st === Accepted || st === Rejected
+  tape (TM st zipper f) = zipper
+  step (TM st zipper f) = (TM st zipper f)
 
 run :: (t a) -> [t a] | Machine t
 run a = abort "not defined"
@@ -95,7 +96,7 @@ test_fromListInf =
     in  take 100 xs == repeatn 100 0
         && take 100 ys == [1..5] ++ repeatn 95 0
   ]
-/*
+
 test_done =
   [ not (done (TM (InState 0) undef undef))
   , done (TM Accepted undef undef)
@@ -121,7 +122,7 @@ test_step =
     f 0 'a' = (InState 0, 'b', Forward)
     f 0 'b' = (InState 0, 'a', Forward)
     f 1 _   = (Accepted,  'x', Stay)
-    
+/*    
 test_run =
   [ let m = last (run (tm ['a','b','x','x']))
     in done m
@@ -172,10 +173,10 @@ tests =
   , test_write
   , test_move
   , test_around
-  //, test_fromListInf
-  //, test_done
-  //, test_tape
-  //, test_step
+  , test_fromListInf
+  , test_done
+  , test_tape
+  , test_step
   //, test_run
   //, test_showStates
   ]
