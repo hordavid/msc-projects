@@ -22,7 +22,6 @@ derive gEq Movement
 
 move :: Movement (Zipper a) -> Zipper a
 move m (Z xs ys)
-	//| m === Stay = (Z xs ys)
 	| m === Forward && length ys > 0 = (Z (insertAt 0 (hd ys) xs) (removeAt 0 ys))
 	| m === Backward && length xs > 0 = (Z (removeAt 0 xs) (insertAt 0 (hd xs) ys))
 	| otherwise = (Z xs ys)
@@ -31,7 +30,7 @@ around :: Int (Zipper a) -> [a]
 around a (Z xs ys) = reverse (take a xs) ++ take (inc a) ys
 
 fromListInf :: a [a] -> Zipper a
-fromListInf a xs = (Z (repeat a) (xs ++ repeat a))
+fromListInf a xs = (Z (repeat a) (xs ++ (repeat a)))
 
 class Machine t where
   done :: (t a) -> Bool
@@ -39,21 +38,26 @@ class Machine t where
   step :: (t a) -> t a
 
 :: State = InState Int | Accepted | Rejected
+GetStateInd :: State -> Int
+GetStateInd (InState i) = i
 
 derive gEq State
 
 :: TuringMachine a = TM State (Zipper a) (Int a -> (State, a, Movement))
 
 instance Machine TuringMachine where
-  done (TM st zipper f) = st === Accepted || st === Rejected
-  tape (TM st zipper f) = zipper
-  step (TM st zipper f) = (TM st zipper f)
+  done (TM s z f) = s === Accepted || s === Rejected
+  tape (TM s z f) = z
+  step (TM s z f) = (TM (fst3 (f (GetStateInd s) (read z))) (move (thd3 (f (GetStateInd s) (read z))) (write (snd3 (f (GetStateInd s) (read z))) z)) f)
 
 run :: (t a) -> [t a] | Machine t
-run a = abort "not defined"
+run t
+	| done t = [t]
+	| otherwise = [(step t)] ++ (run (step t))
 
 showStates :: (t Char) -> [String] | Machine t
-showStates a = abort "not defined"
+//showStates t = [] ++ (toString (around 5 (tape (run t))))
+showStates t = [toString (around 5 (tape m)) \\ m <- (run t)]
 
 // -- TEST --
 test_fromList =
@@ -144,6 +148,26 @@ test_run =
     f 1 'x' = (Accepted,  'x', Stay)
     f _ ch  = (Rejected,  '!', Stay)
 
+test_run2 =
+  let m = tm ['a','b','x','x'] in [(tape t) \\ t <- (run m)]
+  
+  where
+    tm xs = TM (InState 0) (fromList xs) f
+    f 0 'a' = (InState 0, 'b', Forward)
+    f 0 'b' = (InState 0, 'a', Forward)
+    f 0 'x' = (InState 1, 'x', Forward)
+    f 1 'x' = (Accepted,  'x', Stay)
+    f _ ch  = (Rejected,  '!', Stay)
+    
+test_showStates2 = let m = (tm ['a','b','x','x']) in [toString (around 5 (tape t)) \\ t <- (run m)]
+where
+      tm xs = TM (InState 0) (fromListInf ' ' xs) f
+      f 0 'a' = (InState 0, 'b', Forward)
+      f 0 'b' = (InState 0, 'a', Forward)
+      f 0 'x' = (InState 1, 'x', Forward)
+      f 1 'x' = (Accepted,  'x', Stay)
+      f _ ch  = (Rejected,  '!', Stay)
+
 test_showStates =
   [ showStates (tm ['a','b','x','x'])
     == [ "     abxx  "
@@ -183,4 +207,19 @@ tests =
   , test_showStates
   ]
 
-Start = (all and tests, zip2 [1..] (map and tests))
+//Start = (all and tests, zip2 [1..] (map and tests))
+/*Start = [(toString (around 5 (tape m))) \\ m <- [(TM (InState 0) (fromListInf ' ' ['a','b','x','x']) f)]]
+where
+    	f 0 'a' = (InState 0, 'b', Forward)
+      	f 0 'b' = (InState 0, 'a', Forward)
+      	f 0 'x' = (InState 1, 'x', Forward)
+      	f 1 'x' = (Accepted,  'x', Stay)
+      	f _ ch  = (Rejected,  '!', Stay)*/
+Start = test_run
+/*Start = insertAt 0 (toString (around 5 (tape (run (TM (InState 0) (fromListInf ' ' ['a','b','x','x']) f))))) []
+	where
+    	f 0 'a' = (InState 0, 'b', Forward)
+      	f 0 'b' = (InState 0, 'a', Forward)
+      	f 0 'x' = (InState 1, 'x', Forward)
+      	f 1 'x' = (Accepted,  'x', Stay)
+      	f _ ch  = (Rejected,  '!', Stay)*/
