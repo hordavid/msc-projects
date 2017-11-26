@@ -13,6 +13,7 @@ read :: (Zipper a) -> a
 read (Z xs ys) = hd ys
 
 write :: a (Zipper a) -> Zipper a
+write a (Z [] []) = (Z [] [])
 write a (Z xs ys) = (Z xs (insertAt 0 a (removeAt 0 ys))) 
 
 :: Movement = Forward | Backward | Stay
@@ -72,6 +73,7 @@ test_read =
   
 test_write =
   [ write 9 (Z [] [1])        === Z [] [9]
+  , write 9 (Z [] [])         === Z [] []
   , write 9 (Z [] [1..3])     === Z [] [9,2,3]
   , write 9 (Z [4..6] [1..3]) === Z [4..6] [9,2,3]
   ]
@@ -122,7 +124,7 @@ test_step =
     f 0 'a' = (InState 0, 'b', Forward)
     f 0 'b' = (InState 0, 'a', Forward)
     f 1 _   = (Accepted,  'x', Stay)
-/*    
+    
 test_run =
   [ let m = last (run (tm ['a','b','x','x']))
     in done m
@@ -165,7 +167,7 @@ test_showStates =
       f 0 'x' = (InState 1, 'x', Forward)
       f 1 'x' = (Accepted,  'x', Stay)
       f _ ch  = (Rejected,  '!', Stay)
-*/
+
 tests :: [[Bool]]
 tests =
   [ test_fromList
@@ -177,8 +179,8 @@ tests =
   , test_done
   , test_tape
   , test_step
-  //, test_run
-  //, test_showStates
+  , test_run
+  , test_showStates
   ]
 
 Start = (all and tests, zip2 [1..] (map and tests))
