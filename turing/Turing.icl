@@ -51,17 +51,14 @@ instance Machine TuringMachine where
   step (TM s z f) = (TM (fst3 (f (GetStateInd s) (read z))) (move (thd3 (f (GetStateInd s) (read z))) (write (snd3 (f (GetStateInd s) (read z))) z)) f)
 
 run :: (t a) -> [t a] | Machine t
-run t = runner t []
-where 
-	runner :: (t a) [t a] -> [t a] | Machine t
-	runner t xs
-		| done t && length xs == 0 = [t]
-		| otherwise = runner (step t) [t:xs]
-	//| done t = [t]
-	//| otherwise = [(step t)] ++ (run (step t))
+run t = Runner t []
+where
+	Runner :: (t a) [t a] -> [t a] | Machine t
+	Runner m ms
+		| done m = (insertAt (length ms) m ms)
+		| otherwise = Runner (step m) (insertAt (length ms) m ms)
 
 showStates :: (t Char) -> [String] | Machine t
-//showStates t = [] ++ (toString (around 5 (tape (run t))))
 showStates t = [toString (around 5 (tape m)) \\ m <- (run t)]
 
 // -- TEST --
@@ -155,7 +152,6 @@ test_run =
 
 test_run2 =
   let m = tm ['a','b','x','x'] in [toString (around 5 (tape t)) \\ t <- (run m)]
-  
   where
     tm xs = TM (InState 0) (fromList xs) f
     f 0 'a' = (InState 0, 'b', Forward)
@@ -212,15 +208,15 @@ tests =
   , test_showStates
   ]
 
-//Start = (all and tests, zip2 [1..] (map and tests))
-/*Start = [(toString (around 5 (tape m))) \\ m <- [(TM (InState 0) (fromListInf ' ' ['a','b','x','x']) f)]]
+Start = (all and tests, zip2 [1..] (map and tests))
+/*Start = [(toString (around 5 (tape m))) \\ m <- [(run (TM (InState 0) (fromListInf ' ' ['a','b','x','x']) f))]]
 where
     	f 0 'a' = (InState 0, 'b', Forward)
       	f 0 'b' = (InState 0, 'a', Forward)
       	f 0 'x' = (InState 1, 'x', Forward)
       	f 1 'x' = (Accepted,  'x', Stay)
       	f _ ch  = (Rejected,  '!', Stay)*/
-Start = test_run2
+//Start = test_run2
 /*Start = insertAt 0 (toString (around 5 (tape (run (TM (InState 0) (fromListInf ' ' ['a','b','x','x']) f))))) []
 	where
     	f 0 'a' = (InState 0, 'b', Forward)
