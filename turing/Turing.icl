@@ -22,9 +22,9 @@ derive gEq Movement
 
 move :: Movement (Zipper a) -> Zipper a
 move m (Z xs ys)
-	| m === Forward && length ys > 0 = (Z (insertAt 0 (hd ys) xs) (removeAt 0 ys))
-	| m === Backward && length xs > 0 = (Z (removeAt 0 xs) (insertAt 0 (hd xs) ys))
-	| otherwise = (Z xs ys)
+    | m === Forward = Z [(hd ys):xs] (tl ys)
+    | m === Backward = Z (tl xs) [(hd xs):ys]
+    | otherwise = Z xs ys
 
 around :: Int (Zipper a) -> [a]
 around a (Z xs ys) = reverse (take a xs) ++ take (inc a) ys
@@ -38,8 +38,6 @@ class Machine t where
   step :: (t a) -> t a
 
 :: State = InState Int | Accepted | Rejected
-GetStateInd :: State -> Int
-GetStateInd (InState i) = i
 
 derive gEq State
 
@@ -48,15 +46,12 @@ derive gEq State
 instance Machine TuringMachine where
   done (TM s z f) = s === Accepted || s === Rejected
   tape (TM s z f) = z
-  step (TM s z f) = (TM (fst3 (f (GetStateInd s) (read z))) (move (thd3 (f (GetStateInd s) (read z))) (write (snd3 (f (GetStateInd s) (read z))) z)) f)
+  step (TM (InState a) z f) = (TM (fst3 (f a (read z))) (move (thd3 (f a (read z))) (write (snd3 (f a (read z))) z)) f)
 
 run :: (t a) -> [t a] | Machine t
-run t = Runner t []
-where
-	Runner :: (t a) [t a] -> [t a] | Machine t
-	Runner m ms
-		| done m = (insertAt (length ms) m ms)
-		| otherwise = Runner (step m) (insertAt (length ms) m ms)
+run t
+	| done t = [t]
+	| otherwise = [t] ++ run (step (t))
 
 showStates :: (t Char) -> [String] | Machine t
 showStates t = [toString (around 5 (tape m)) \\ m <- (run t)]
@@ -209,18 +204,3 @@ tests =
   ]
 
 Start = (all and tests, zip2 [1..] (map and tests))
-/*Start = [(toString (around 5 (tape m))) \\ m <- [(run (TM (InState 0) (fromListInf ' ' ['a','b','x','x']) f))]]
-where
-    	f 0 'a' = (InState 0, 'b', Forward)
-      	f 0 'b' = (InState 0, 'a', Forward)
-      	f 0 'x' = (InState 1, 'x', Forward)
-      	f 1 'x' = (Accepted,  'x', Stay)
-      	f _ ch  = (Rejected,  '!', Stay)*/
-//Start = test_run2
-/*Start = insertAt 0 (toString (around 5 (tape (run (TM (InState 0) (fromListInf ' ' ['a','b','x','x']) f))))) []
-	where
-    	f 0 'a' = (InState 0, 'b', Forward)
-      	f 0 'b' = (InState 0, 'a', Forward)
-      	f 0 'x' = (InState 1, 'x', Forward)
-      	f 1 'x' = (Accepted,  'x', Stay)
-      	f _ ch  = (Rejected,  '!', Stay)*/
