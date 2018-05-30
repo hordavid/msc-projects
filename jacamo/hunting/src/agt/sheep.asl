@@ -1,4 +1,4 @@
-// Agent sheep in project baranyok_es_farkasok
+// Agent sheep in project hunting
 
 { include("$jacamoJar/templates/common-cartago.asl") }
 
