@@ -1,0 +1,57 @@
+/*
+    hunting
+    ---------------------------
+
+    JaCaMo Project File
+
+    This file defines the initial state of the MAS (initial agents, environment, organisation, ....)
+
+    (see jacamo/doc/jcm.html for more information about what can be defined in this file)
+
+    JaCaMo <VERSION>
+    <DATE>
+*/
+
+mas hunting {
+
+    agent sheep1 : sheep.asl  { 
+        focus: hunting.sheep1View 
+    }
+    agent sheep2 : sheep.asl  { 
+        focus: hunting.sheep2View 
+    }
+    agent sheep3 : sheep.asl  { 
+        focus: hunting.sheep3View 
+    }
+    agent wolf1 : wolf.asl  { 
+        focus: hunting.wolf1view 
+    }
+    agent wolf2 : wolf.asl  { 
+        focus: hunting.wolf2view 
+    }
+    agent wolf3 : wolf.asl  { 
+        focus: hunting.wolf3view 
+    }
+	agent wolf4 : wolf.asl  { 
+        focus: hunting.wolf4view 
+    }
+    
+    workspace hunting {
+        // each agent has its own artifact to interface with the Hunting Planet scenario
+        // first parameter is the id of the scenario
+        // second parameter is the id of the agent in the scenario
+        artifact sheep1View: hunting.HuntingPlanet(0) //0 - sheep ID
+        artifact sheep2View: hunting.HuntingPlanet(1) //0 - sheep ID
+        artifact sheep3View: hunting.HuntingPlanet(2) //0 - sheep ID
+        artifact wolf1view: hunting.HuntingPlanet(3) //1 - wolf 1
+        artifact wolf2view: hunting.HuntingPlanet(4)
+        artifact wolf3view: hunting.HuntingPlanet(5)
+        artifact wolf4view: hunting.HuntingPlanet(6)
+    }
+    
+    class-path: lib                      // java class path
+    
+    asl-path:   src/agt, src/agt/inc     // agent source path  
+
+}
+
