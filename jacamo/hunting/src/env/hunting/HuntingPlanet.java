@@ -20,6 +20,8 @@ public class HuntingPlanet extends Artifact {
 	static HuntingWorldModel model = null;
 	static HuntingWorldView view;
 	
+	int step;
+	
 	static boolean hasGUI   = true;
 	
 	@OPERATION
@@ -49,6 +51,8 @@ public class HuntingPlanet extends Artifact {
 	        	case 6: defineObsProperty("side", 1, 0); break;
 	        }
             
+            step = 0;
+            
             updateAgPercept();
         } catch (Exception e) {
             logger.warning("Error creating world "+e);
@@ -58,11 +62,14 @@ public class HuntingPlanet extends Artifact {
 	
 	private void updateAgPercept() {
         // its location
+		
         Location l = model.getAgPos(agId);
         ObsProperty p = getObsProperty("pos");
         p.updateValue(0, l.x);
         p.updateValue(1, l.y);
 
+        step++;
+        
         // what's around
         updateAgPercept(l.x - 1, l.y - 1);
         updateAgPercept(l.x - 1, l.y);
@@ -100,6 +107,8 @@ public class HuntingPlanet extends Artifact {
         if (sleep > 0) await_time(sleep);
         if(model.eat(agId)) {
         	defineObsProperty("life", 0);
+        	logger.info("Sheep is catched only " + step + " steps.");
+        	step = 0;
         };
         updateAgPercept();
     }
