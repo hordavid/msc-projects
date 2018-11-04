@@ -1,0 +1,83 @@
+-- Vkod, Nev, Cim, Telefon, Kedvezmény_kod, Hitelkeret, Korzet, Zona, Szall_utasitas --
+-- INSERT INTO awud3u.customers (name, address, phone_number, discount_group, balance, sales_area, customer_area, shipping_comment) VALUES ('Vevõ1','Vevõcím1','111111','A','11000','Körzet1','1','Kulcs a lábtörlõ alatt'),
+-- INSERT INTO awud3u.customers (name, address, phone_number, discount_group, balance, sales_area, customer_area, shipping_comment) VALUES ('Vevõ2','Vevõcím2','222222','A','12000','Körzet1','1','Balra az elsõ ajtó az udvarban'),
+-- INSERT INTO awud3u.customers (name, address, phone_number, discount_group, balance, sales_area, customer_area, shipping_comment) VALUES ('Vevõ3','Vevõcím3','333333','B','13000','Körzet1','2',''),
+-- INSERT INTO awud3u.customers (name, address, phone_number, discount_group, balance, sales_area, customer_area, shipping_comment) VALUES ('Vevõ4','Vevõcím4','444444','B','14000','Körzet1','2','Legalsó csengõ'),
+-- INSERT INTO awud3u.customers (name, address, phone_number, discount_group, balance, sales_area, customer_area, shipping_comment) VALUES ('Vevõ5','Vevõcím5','555555','B','15000','Körzet1','2',''),
+
+-- (Szkod, Nev, Cim, Telefon)
+-- INSERT INTO awud3u.wholesalers (title, address, phone_number) VALUES ('Szállító1','Szállítócím1','1555555'),
+-- INSERT INTO awud3u.wholesalers (title, address, phone_number) VALUES ('Szállító2','Szállítócím2','2555555'),
+-- INSERT INTO awud3u.wholesalers (title, address, phone_number) VALUES ('Szállító3','Szállítócím3','3555555'),
+-- INSERT INTO awud3u.wholesalers (title, address, phone_number) VALUES ('Szállító4','Szállítócím4','4555555'),
+
+-- (Termekosztaly_nev, Leltari_kod)
+-- INSERT INTO awud3u.product_categories (title, sku) VALUES ('Konzerv','1'),
+-- INSERT INTO awud3u.product_categories (title, sku) VALUES ('Üdítõ','2'),
+-- INSERT INTO awud3u.product_categories (title, sku) VALUES ('Egyéb','3'),
+
+-- (Cikkszam, Megnevezes, Menny_egyseg, Listaar, A_ar, B_ar, C_ar, D_ar, Termekosztaly_nev)
+-- INSERT INTO awud3u.products (sku, title, unit, price, price_a, price_b, price_c, price_d, product_category_id) VALUES ('1','Almalé','liter',200,190,180,170,160,2);
+-- INSERT INTO awud3u.products (sku, title, unit, price, price_a, price_b, price_c, price_d, product_category_id) VALUES ('2','Megylé','liter',250,240,230,220,210,2);
+-- INSERT INTO awud3u.products (sku, title, unit, price, price_a, price_b, price_c, price_d, product_category_id) VALUES ('3','Babkonzerv','doboz',350,340,330,320,310,1);
+-- INSERT INTO awud3u.products (sku, title, unit, price, price_a, price_b, price_c, price_d, product_category_id) VALUES ('4','Kukorica','doboz',150,140,130,120,110,1);
+-- INSERT INTO awud3u.products (sku, title, unit, price, price_a, price_b, price_c, price_d, product_category_id) VALUES ('5','Cukor','kg',200,190,180,170,160,3);
+-- INSERT INTO awud3u.products (sku, title, unit, price, price_a, price_b, price_c, price_d, product_category_id) VALUES ('6','Rizs','kg',400,390,380,370,360,3);
+
+-- (Cikkszam, Szkod, Ar)
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (1,1,140);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (1,2,150);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (2,1,190);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (2,3,200);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (3,2,260);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (3,4,270);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (4,3,80);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (4,4,90);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (5,1,120);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (5,4,140);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (6,2,300);
+-- INSERT INTO awud3u.product_stock (product_id, wholesaler_id, quantity) VALUES (6,3,320);
+
+-- (Vkod, VRszam, Rend_datum, (Cikkszam, Mennyiseg)* )
+-- INSERT INTO awud3u.orders (customer_id, order_identifier, created_at) VALUES (1,'1',TO_DATE('2017/01/23', 'yyyy/mm/dd'));
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (1,1,10);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (1,2,20);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (1,3,5);
+
+-- INSERT INTO awud3u.orders (customer_id, order_identifier, created_at) VALUES (2,'2',TO_DATE('2017/01/23', 'yyyy/mm/dd'));
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (2,1,10);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (2,5,14);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (2,3,5);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (2,4,6);
+
+-- INSERT INTO awud3u.orders (customer_id, order_identifier, created_at) VALUES (3,'3',TO_DATE('2017/01/23', 'yyyy/mm/dd'));
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (3,1,10);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (3,5,14);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (3,3,5);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (3,6,6);
+
+-- INSERT INTO awud3u.orders (customer_id, order_identifier, created_at) VALUES (3,'4',TO_DATE('2017/01/24', 'yyyy/mm/dd'));
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (4,1,12);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (4,5,11);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (4,2,20);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (4,4,16);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (4,6,8);
+
+-- INSERT INTO awud3u.orders (customer_id, order_identifier, created_at) VALUES (4,'5',TO_DATE('2017/01/24', 'yyyy/mm/dd'));
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (5,1,11);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (5,3,17);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (5,6,5);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (5,4,26);
+
+-- INSERT INTO awud3u.orders (customer_id, order_identifier, created_at) VALUES (4,'6',TO_DATE('2017/01/24', 'yyyy/mm/dd'));
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (6,2,10);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (6,5,14);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (6,3,5);
+-- INSERT INTO awud3u.order_products (order_id, product_id, quantity) VALUES (6,4,6);
+            
+-- (Vkod, Osszeg)
+-- INSERT INTO awud3u.customer_transactions (customer_id, amount) VALUES (1,10000);
+-- INSERT INTO awud3u.customer_transactions (customer_id, amount) VALUES (2,12000);
+-- INSERT INTO awud3u.customer_transactions (customer_id, amount) VALUES (3,14000);
+-- INSERT INTO awud3u.customer_transactions (customer_id, amount) VALUES (4,10000);
+-- INSERT INTO awud3u.customer_transactions (customer_id, amount) VALUES (5,13000);
