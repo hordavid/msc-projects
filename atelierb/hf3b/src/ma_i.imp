@@ -1,0 +1,145 @@
+/* ma_i;
+ * Creation date: 2016.03.18.
+ */
+
+IMPLEMENTATION ma_i
+REFINES ma
+
+SEES
+    BASIC_IO
+//IMPORTS
+//    iu
+//PROMOTES
+  //  be
+CONCRETE_VARIABLES
+    via1c, vib1c, tac, tbc, tmc, tuc, vm
+INVARIANT
+    via1c:BOOL & via1c=via1 &
+    vib1c:BOOL & vib1c=vib1 &
+    tac:1..5-->BOOL & tac=ta &
+    tbc:1..5-->BOOL & tbc=tb &
+    tmc:1..5-->BOOL & tmc=tm &
+    tuc:1..5-->INT  & tuc=tu
+INITIALISATION
+    via1c:=FALSE;vib1c:=FALSE; tac:=(1..5)*{FALSE}; tbc:=(1..5)*{FALSE}; tmc:=(1..5)*{FALSE};vm:=FALSE;
+    viu1:=FALSE; tuc:=(1..5)*{0}
+OPERATIONS
+    init=
+    BEGIN
+        //        initu;
+        viu1:=FALSE;
+        via1c:=FALSE;
+        vib1c:=FALSE;
+        vm:=FALSE
+    END
+    ;
+    mbe=
+    BEGIN
+        //        be
+        VAR ii, tt IN
+            ii:=1;
+            tt:=0;
+    		WHILE ii<=5 DO
+        		tt<--INTERVAL_READ(MININT, MAXINT);
+        		tuc(ii):=tt;
+        		ii:=ii+1
+    		INVARIANT
+        		ii:1..6
+        		& tuc:1..5-->INT
+        		& !jj.(jj:1..ii-1=>jj:1..5)
+    		VARIANT
+        		6-ii
+    		END;
+    		viu1:=TRUE
+		END
+    END
+    ;
+
+    mtrb=
+    BEGIN
+        VAR ii, dd IN
+            ii:=1;
+            WHILE ii<=5 DO
+                dd:=tuc(ii);
+                IF dd<0 THEN
+                    tbc(ii):=TRUE
+                ELSE
+                    tbc(ii):=FALSE
+                END;
+                ii:=ii+1
+            INVARIANT
+                ii:1..6
+                & tuc:1..5-->INT
+                & tbc:1..5-->BOOL
+                & !jj.(jj:1..ii-1=>tbc(jj)=bool(tuc(jj)<0))
+            VARIANT
+                6-ii
+            END;
+            vib1c:=TRUE
+        END
+    END
+    ;
+    mtra=
+    BEGIN
+        VAR ii, dd IN
+            ii:=1;
+            WHILE ii<=5 DO
+                dd:=tuc(ii);
+                IF dd>0 THEN
+                    tac(ii):=TRUE
+                ELSE
+                    tac(ii):=FALSE
+                END;
+                ii:=ii+1
+            INVARIANT
+                ii:1..6
+                & tuc:1..5-->INT
+                & tac:1..5-->BOOL                
+                & !jj.(jj:1..ii-1=>tac(jj)=bool(tuc(jj)>0))
+            VARIANT
+                6-ii
+            END;
+            via1c:=TRUE
+        END
+    END
+    ;
+    opm=
+    BEGIN
+        VAR ii, dd,cc IN
+            ii:=1;
+            WHILE ii<=5 DO
+                dd:=tac(ii);
+                cc:=tbc(ii);
+                IF dd/=TRUE&cc/=TRUE THEN
+                    tmc(ii):=TRUE
+                ELSE
+                    tmc(ii):=FALSE
+                END;
+                ii:=ii+1
+            INVARIANT
+                ii:1..6
+                & tac:1..5-->BOOL
+                & tbc:1..5-->BOOL
+                & tmc:1..5-->BOOL
+                & !jj.(jj:1..ii-1=>tmc(jj)=bool(ta(jj)/=TRUE&tb(jj)/=TRUE))
+            VARIANT
+                6-ii
+            END
+        END
+        ;        
+
+        vm:=TRUE
+    END
+    ;
+
+	ki=
+	BEGIN
+    	BOOL_WRITE(vm);STRING_WRITE(" ");
+    	BOOL_WRITE(via1c);STRING_WRITE(" ");
+    	BOOL_WRITE(vib1c);STRING_WRITE(" ");
+    	BOOL_WRITE(viu1);STRING_WRITE(" ");
+    	STRING_WRITE("\n")
+	END
+
+    
+END

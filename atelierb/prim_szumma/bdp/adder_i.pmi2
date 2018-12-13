@@ -1,0 +1,189 @@
+﻿THEORY BalanceX IS
+  adder_i,55,13,0,38,4,0,0;
+  ValuesLemmas,0,0,0,0,0,0,0;
+  Initialisation,0,0,0,0,0,0,0;
+  f_osszead,55,13,0,38,4,0,0
+END
+&
+THEORY ProofState IS
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  dd(0) & ah(10 = ii$7777-1) & pr & dd & eh(10,_h,Goal) & ah(SIGMA(ii).(ii: 1..ii$7777-1 | {TRUE|->tomb(ii),FALSE|->0}(bool(tomb(ii) mod 2 = 0)))>=0) & ah(SIGMA(ii).(ii: 1..ii$7777-1 | {TRUE|->tomb(ii),FALSE|->0}(bool(tomb(ii) mod 2 = 0))) = SIGMA(jj).(jj: 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))) & pr & dd & eh(SIGMA(ii).(ii: 1..ii$7777-1 | {TRUE|->tomb(ii),FALSE|->0}(bool(tomb(ii) mod 2 = 0))),SIGMA(jj).(jj: 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0))),Goal) & pr & dd & ah(SIGMA(ii).(ii: 1..ii$7777-1 | {TRUE|->tomb(ii),FALSE|->0}(bool(tomb(ii) mod 2 = 0)))<=1000) & ah(SIGMA(ii).(ii: 1..ii$7777-1 | {TRUE|->tomb(ii),FALSE|->0}(bool(tomb(ii) mod 2 = 0))) = SIGMA(jj).(jj: 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))) & pr & dd & eh(SIGMA(ii).(ii: 1..ii$7777-1 | {TRUE|->tomb(ii),FALSE|->0}(bool(tomb(ii) mod 2 = 0))),SIGMA(jj).(jj: 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0))),Goal) & ah(1000 = (ii$7777-1)*100) & pr & dd & eh(1000,_h,Goal) & pr & dd & pr;
+  dd(0) & ah(ii$7777-1 = 10) & pr & dd & eh(ii$7777-1,10,Goal) & pr;
+  dd(0) & ah(0<=SIGMA(jj).(jj: 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))) & dd & ah(SIGMA(jj).(jj: 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))<=1000) & ah(ii$7777-1 = 10) & pr & dd & ah((ii$7777-1)*100 = 1000) & pr & dd & eh(1000,_h,Goal) & pr & pr;
+  pr;
+  dd(0) & ah(ii$7777-1 = 10) & pr & dd & ah(SIGMA(jj).(jj: 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))<=(ii$7777-1)*100) & eh(ii$7777-1,_h,Goal) & pr;
+  pr;
+  dd(0) & pr & ah(ii+1-1 = ii) & pr & dd & eh(ii+1-1,ii,Goal) & ah(1..ii-1\/{ii} = 1..ii & 1..ii-1/\{ii} = {}) & pr & pr & dd & ah(SIGMA(jj).(jj: 1..ii | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0))) = SIGMA(jj).(jj: 1..ii-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))+SIGMA(jj).(jj: {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))) & eh(1..ii,1..ii-1\/{ii},Goal) & ar(s1.3,Goal) & pr & dd & eh(SIGMA(jj).(jj: 1..ii | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0))),SIGMA(jj).(jj: 1..ii-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))+SIGMA(jj).(jj: {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0))),Goal) & ah(SIGMA(jj).(jj: {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0))) = 0) & pr & ah(bool(tomb(ii) mod 2 = 0) = FALSE) & pr & dd & eh(bool(tomb(ii) mod 2 = 0),FALSE,Goal) & pr & dd & eh(SIGMA(jj).(jj: {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0))),0,Goal) & pr;
+  pr;
+  dd(0) & pr & ar(b1.59,Once) & ah(tomb(ii) mod 2+1<=2) & ar(b1.60,Once) & pr;
+  pr;
+  pr;
+  pr;
+  dd(0) & ah(ossz = SIGMA(jj).(jj: 1..ii-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))) & ah(ii+1-1 = ii) & pr & dd & eh(ii+1-1,ii,Goal) & ah(1..ii-1\/{ii} = 1..ii & 1..ii-1/\{ii} = {}) & pr & pr & dd & ah(tomb(ii) = SIGMA(jj).(jj: {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(tomb(jj) mod 2 = 0)))) & pr & dd & eh(tomb(ii),_h,Goal) & eh(1..ii,1..ii-1\/{ii},Goal) & ar(s1.3,Goal) & pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  dd(0) & pr;
+  pr;
+  pr;
+  pr;
+  dd(0) & ar(b1.59,Once);
+  dd(0) & ah(0<=tomb(ii) mod 2) & ar(b1.59,Once) & pr;
+  dd(0) & ah(tomb(ii) mod 2+1<=2) & ar(b1.60,Once) & pr;
+  dd & ar(b1.61,Once);
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  dd(0) & pr & ar(s1.6,Goal) & pr;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO,genDivergencePO == KO,genWDPO == KO,local_op == OK);
+  PRVersion("svn")(CLT == "V4.0-7795");
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

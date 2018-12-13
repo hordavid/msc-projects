@@ -1,0 +1,12 @@
+digraph {
+ia [ label=" ia " shape= box ]
+ib [ label=" ib " shape= box ]
+iu [ label=" iu " shape= box ]
+ma_i [ label=" ma\nma_i " shape= box ]
+main_i [ label=" main\nmain_i " shape= box ]
+BASIC_IO [ label=" BASIC_IO " shape= boxshape= rhombcolor= pink ]
+
+"ma_i" -> "BASIC_IO" [style= dotted ]
+"main_i" -> "BASIC_IO" []
+"main_i" -> "ma_i" []
+}

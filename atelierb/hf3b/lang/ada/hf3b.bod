@@ -1,0 +1,25 @@
+-- WARNING : some components of this project have not been fully proved
+-- THERE ARE THEREFORE NO GUARANTEES ABOUT THIS FILE
+-- /home/feri/AB40_ws1/hf3b/lang/ada/hf3b.bod
+-- Project startup module
+-- We need all the specifications in order to solve the SEES links
+with main ;
+with basic_io ;
+with ma ;
+procedure hf3b is
+	this : main.PTR_main ;
+begin
+	-- Allocation of main object
+	this := new main.TYPE_main ;
+	-- Create instances
+	main.IMPORTS(this) ;
+	-- Set SEES links
+	-- ma SEES basic_io
+	ma.SET_basic_io(this.ref_ma, this.ref_basic_io) ;
+	-- Set links for glued variables
+	-- Initialise instances
+	main.INITIALISATION(this) ;
+	-- Call entry point
+	main.#main#op(this) ;
+	-- End of project
+end hf3b ;

@@ -1,0 +1,43 @@
+V "GNAT Lib v5"
+M P W=b
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U hf3a%b		hf3a.adb		b7873779 NE OO SU IL
+W basic_io%s		basic_io.adb		basic_io.ali
+W ma%s			ma.adb			ma.ali
+W main%s		main.adb		main.ali
+
+D basic_io.ads		20180417154332 d8d25709 basic_io%s
+D hf3a.adb		20180417142237 49229c27 hf3a%b
+D ma.ads		20180417154332 e5eec72c ma%s
+D main.ads		20180417154332 c3993b7b main%s
+D sets.ads		20180417154332 0b7f4888 sets%s
+D system.ads		20141031112219 1d274481 system%s
+D unchconv.ads		20070406091342 ca2f9e18 unchecked_conversion%s
+X 1 basic_io.ads
+19K9*BASIC_IO 52e13 2|10w6
+29P14*PTR_BASIC_IO(23R14)
+X 2 hf3a.adb
+12U11*hf3a 12b11 28l5 28t9
+13p9 this{4|30P14} 16m9 18r22 21r25 21r38 24r29 26r17
+X 3 ma.ads
+26K9*ma 2|11w6 21r9 3|69e7
+43P14*PTR_ma(28R14)
+49U19*SET_BASIC_IO 2|21s12
+X 4 main.ads
+21K9*main 2|9w6 13r16 16r21 18r9 24r9 26r9 4|41e9
+23R14*TYPE_main 2|16r26 4|29e20
+27p17*ref_BASIC_IO{1|29P14} 2|21r43
+28p17*ref_ma{3|43P14} 2|21r30
+30P14*PTR_main(23R14) 2|13r21
+34U19*IMPORTS 2|18s14
+35U19*INITIALISATION 2|24s14
+39U19*op 2|26s14
+

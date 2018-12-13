@@ -1,0 +1,27 @@
+/* main_i
+ * Author: 
+ * Creation date: 2016.03.18.
+ */
+
+IMPLEMENTATION main_i
+REFINES main
+IMPORTS
+    BASIC_IO ,
+    ma
+OPERATIONS
+    op =
+    BEGIN
+        init ;
+        ki ;
+        mbe ;
+        ki ;
+        mtra ;
+        ki ;
+        mtrb ;
+        ki ;
+        opm ;
+        ki
+
+    END
+
+END

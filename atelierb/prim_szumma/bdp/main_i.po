@@ -1,0 +1,15 @@
+﻿THEORY ProofList
+END
+&
+THEORY Formulas IS
+  ("`Included,imported and extended machines invariants'" & tomb$1: 1..10 +-> 1..100 & dom(tomb$1) = 1..10 & darab$1: 0..10 & osszeg$1: 0..1000);
+  ("`Variables conservation'" & tomb = tomb$1 & darab = darab$1 & osszeg = osszeg$1);
+  ("`Included,imported and extended machines invariants'" & tomb: 1..10 +-> 1..100 & dom(tomb) = 1..10 & darab: 0..10 & osszeg: 0..1000)
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO, genDivergencePO == KO, genWDPO == KO, local_op == OK)
+END

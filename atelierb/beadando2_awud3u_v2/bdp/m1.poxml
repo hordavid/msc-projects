@@ -1,0 +1,2849 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((measures) : (((((1) .. (100))) +-&gt; (INT))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((isFull) : (BOOL))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:1" typref="2043437594" value="isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (TRUE))) =&gt; (((card(measures)) = (100))))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (FALSE))) =&gt; ((card(measures) +1 &lt;= 100)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":" initialTag="((mini) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:1" typref="2701647786" value="mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((maxi) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:1" typref="2701647786" value="maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mavg) : (INT))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:1" typref="2701647786" value="mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = mini) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(mini) &lt;= (measures )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:2" typref="2701647786" value="mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:2" typref="2701647786" value="mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = maxi) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(jj) &lt;= (measures )(maxi)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:2" typref="2701647786" value="maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;" initialTag="((not(measures = {})) =&gt; (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))))">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:1" typref="2701647786" value="mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:1:1:1" typref="103245008" value="measures"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:2:1:1" typref="2043437594" value="isFull"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:2:2:1" typref="2043437594" value="FALSE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:3:1:1" typref="2701647786" value="mini"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:3:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:4:1:1" typref="2701647786" value="maxi"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:4:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:5:1:1" typref="2701647786" value="mavg"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:5:2:1" typref="2701647786" value="0"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((measures) : (((((1) .. (100))) +-&gt; (INT))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((isFull) : (BOOL))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:1" typref="2043437594" value="isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (TRUE))) =&gt; (((card(measures)) = (100))))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (FALSE))) =&gt; ((card(measures) +1 &lt;= 100)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":" initialTag="((mini) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:1" typref="2701647786" value="mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((maxi) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:1" typref="2701647786" value="maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mavg) : (INT))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:1" typref="2701647786" value="mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = mini) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(mini) &lt;= (measures )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:2" typref="2701647786" value="mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:2" typref="2701647786" value="mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = maxi) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(jj) &lt;= (measures )(maxi)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:2" typref="2701647786" value="maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;" initialTag="((not(measures = {})) =&gt; (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))))">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:1" typref="2701647786" value="mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>store</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:2:1:1" typref="2701647786" value="item"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:2:1:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:2" typref="2043437594" value="t_isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:3" typref="2701647786" value="t_mini"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:4" typref="2701647786" value="t_maxi"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:5" typref="2701647786" value="t_mavg"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:1" typref="103245008" value="t_measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:2:1" typref="2701647786" value="t_mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:3:1" typref="2701647786" value="t_maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:4:1" typref="2701647786" value="t_mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:4:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:5:1" typref="2043437594" value="t_isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:5:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:1:1" typref="2043437594" value="t_isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:2:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:1:1" typref="2043437594" value="t_isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:2:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="2"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:2:1" typref="2043437594" value="t_isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:2:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:1" typref="103245008" value="t_measures"/>
+<Binary_Exp op="&lt;+" typref="103245008">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|-&gt;" typref="3672872563">
+<Binary_Exp op="-" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:1:1" typref="2701647786" value="jj"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:1" typref="103245008" value="t_measures"/>
+<Binary_Exp op="&lt;+" typref="103245008">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:2:1" typref="103245008" value="measures"/>
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|-&gt;" typref="3672872563">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:2:2:1:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:2:2:1:2" typref="2701647786" value="item"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:1:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:2:2" typref="2701647786" value="t_mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:3:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:1:2" typref="2701647786" value="t_mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:2:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:1:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:2:2" typref="2701647786" value="t_maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:3:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:1:2" typref="2701647786" value="t_maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:2:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:1:1" typref="103245008" value="t_measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:1" typref="2701647786" value="t_mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:2:1:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:3:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:1:1:1" typref="103245008" value="measures"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:1:2:1" typref="103245008" value="t_measures"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:2:1:1" typref="2043437594" value="isFull"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:2:2:1" typref="2043437594" value="t_isFull"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:3:1:1" typref="2701647786" value="mini"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:3:2:1" typref="2701647786" value="t_mini"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:4:1:1" typref="2701647786" value="maxi"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:4:2:1" typref="2701647786" value="t_maxi"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:5:1:1" typref="2701647786" value="mavg"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:5:2:1" typref="2701647786" value="t_mavg"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((measures) : (((((1) .. (100))) +-&gt; (INT))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((isFull) : (BOOL))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:1" typref="2043437594" value="isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (TRUE))) =&gt; (((card(measures)) = (100))))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (FALSE))) =&gt; ((card(measures) +1 &lt;= 100)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":" initialTag="((mini) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:1" typref="2701647786" value="mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((maxi) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:1" typref="2701647786" value="maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mavg) : (INT))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:1" typref="2701647786" value="mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = mini) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(mini) &lt;= (measures )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:2" typref="2701647786" value="mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:2" typref="2701647786" value="mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = maxi) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(jj) &lt;= (measures )(maxi)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:2" typref="2701647786" value="maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;" initialTag="((not(measures = {})) =&gt; (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))))">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:1" typref="2701647786" value="mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>average</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:1:1" typref="2701647786" value="sum"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:1:1" typref="2701647786" value="sum"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:1:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:1" typref="2701647786" value="sum"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:2:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:2:2" typref="103245008"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:2:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:2:2" typref="103245008"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:3:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="/" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:3:1:2:1:1" typref="2701647786" value="sum"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:3:1:2:1:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+</ANY_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((measures) : (((((1) .. (100))) +-&gt; (INT))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((isFull) : (BOOL))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:1" typref="2043437594" value="isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (TRUE))) =&gt; (((card(measures)) = (100))))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (FALSE))) =&gt; ((card(measures) +1 &lt;= 100)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":" initialTag="((mini) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:1" typref="2701647786" value="mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((maxi) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:1" typref="2701647786" value="maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mavg) : (INT))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:1" typref="2701647786" value="mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = mini) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(mini) &lt;= (measures )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:2" typref="2701647786" value="mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:2" typref="2701647786" value="mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = maxi) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(jj) &lt;= (measures )(maxi)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:2" typref="2701647786" value="maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;" initialTag="((not(measures = {})) =&gt; (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))))">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:1" typref="2701647786" value="mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>minimum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:1:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:2:2" typref="2701647786" value="ii"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:3:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:3:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:3:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+</ANY_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((measures) : (((((1) .. (100))) +-&gt; (INT))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((isFull) : (BOOL))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:1" typref="2043437594" value="isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (TRUE))) =&gt; (((card(measures)) = (100))))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (FALSE))) =&gt; ((card(measures) +1 &lt;= 100)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":" initialTag="((mini) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:1" typref="2701647786" value="mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((maxi) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:1" typref="2701647786" value="maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mavg) : (INT))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:1" typref="2701647786" value="mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = mini) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(mini) &lt;= (measures )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:2" typref="2701647786" value="mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:2" typref="2701647786" value="mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = maxi) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(jj) &lt;= (measures )(maxi)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:2" typref="2701647786" value="maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;" initialTag="((not(measures = {})) =&gt; (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))))">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:1" typref="2701647786" value="mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>maximum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:1:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:2:2" typref="2701647786" value="ii"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:3:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:3:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:3:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+</ANY_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((measures) : (((((1) .. (100))) +-&gt; (INT))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((isFull) : (BOOL))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:1" typref="2043437594" value="isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (TRUE))) =&gt; (((card(measures)) = (100))))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (FALSE))) =&gt; ((card(measures) +1 &lt;= 100)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":" initialTag="((mini) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:1" typref="2701647786" value="mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((maxi) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:1" typref="2701647786" value="maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mavg) : (INT))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:1" typref="2701647786" value="mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = mini) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(mini) &lt;= (measures )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:2" typref="2701647786" value="mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:2" typref="2701647786" value="mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = maxi) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(jj) &lt;= (measures )(maxi)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:2" typref="2701647786" value="maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;" initialTag="((not(measures = {})) =&gt; (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))))">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:1" typref="2701647786" value="mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Well_Definedness>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((measures) : (((((1) .. (100))) +-&gt; (INT))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((isFull) : (BOOL))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:1" typref="2043437594" value="isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (TRUE))) =&gt; (((card(measures)) = (100))))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;" initialTag="((((isFull) = (FALSE))) =&gt; ((card(measures) +1 &lt;= 100)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:1" typref="2043437594" value="isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:4:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op=":" initialTag="((mini) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:1" typref="2701647786" value="mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((maxi) : (((1) .. (100))))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:1" typref="2701647786" value="maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mavg) : (INT))">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:1" typref="2701647786" value="mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:7:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = mini) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(mini) &lt;= (measures )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:2:2" typref="2701647786" value="mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:1:2" typref="2701647786" value="mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:8:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (((1) .. (card(measures))))) &amp; not(jj = maxi) &amp; (2 &lt;= card(measures))) =&gt; (((measures )(jj) &lt;= (measures )(maxi)))))" type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:2:2" typref="2701647786" value="maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;" initialTag="((not(measures = {})) =&gt; (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))))">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:1" typref="2701647786" value="mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:2:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:2:1:10:2:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Well_Definedness>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:1:1:1" typref="103245008" value="measures"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:2:1:1" typref="2043437594" value="isFull"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:2:2:1" typref="2043437594" value="FALSE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:3:1:1" typref="2701647786" value="mini"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:3:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:4:1:1" typref="2701647786" value="maxi"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:4:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:5:1:1" typref="2701647786" value="mavg"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:3:1:5:2:1" typref="2701647786" value="0"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_store</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:2:1:1" typref="2701647786" value="item"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:2:1:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_store</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:2:1:1" typref="2701647786" value="item"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:2:1:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:2" typref="2043437594" value="t_isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:3" typref="2701647786" value="t_mini"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:4" typref="2701647786" value="t_maxi"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:1:5" typref="2701647786" value="t_mavg"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:1" typref="103245008" value="t_measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:2:1" typref="2701647786" value="t_mini"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:3:1" typref="2701647786" value="t_maxi"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:3:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:4:1" typref="2701647786" value="t_mavg"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:4:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:5:1" typref="2043437594" value="t_isFull"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:5:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:1:1" typref="2043437594" value="t_isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:2:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:1:1" typref="2043437594" value="t_isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:2:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:1:2:1" typref="2701647786" value="2"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:2:1" typref="2043437594" value="t_isFull"/>
+<Boolean_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:1:2:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:1" typref="103245008" value="t_measures"/>
+<Binary_Exp op="&lt;+" typref="103245008">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:1" typref="103245008" value="measures"/>
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|-&gt;" typref="3672872563">
+<Binary_Exp op="-" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:1:1" typref="2701647786" value="jj"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:8:2:1:2:2:2:1:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:1" typref="103245008" value="t_measures"/>
+<Binary_Exp op="&lt;+" typref="103245008">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:2:1" typref="103245008" value="measures"/>
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|-&gt;" typref="3672872563">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:2:2:1:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:9:2:2:1:2" typref="2701647786" value="item"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:1:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:2:2" typref="2701647786" value="t_mini"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:3:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:1:2" typref="2701647786" value="t_mini"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:2:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:10:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:1:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:2:2" typref="2701647786" value="t_maxi"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:3:1:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:1:2" typref="2701647786" value="t_maxi"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:2:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:11:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:1:1" typref="103245008" value="t_measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:1:2" typref="103245008"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:1" typref="2701647786" value="t_mavg"/>
+<Binary_Exp op="/" typref="2701647786">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:2:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:2:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:2:1:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:3:1:1" typref="103245008" value="t_measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:2:1:12:2:2:2:1" typref="103245008" value="t_measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:1:1:1" typref="103245008" value="measures"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:1:2:1" typref="103245008" value="t_measures"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:2:1:1" typref="2043437594" value="isFull"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:2:2:1" typref="2043437594" value="t_isFull"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:3:1:1" typref="2701647786" value="mini"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:3:2:1" typref="2701647786" value="t_mini"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:4:1:1" typref="2701647786" value="maxi"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:4:2:1" typref="2701647786" value="t_maxi"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:5:1:1" typref="2701647786" value="mavg"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:1:3:1:3:1:5:2:1" typref="2701647786" value="t_mavg"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_average</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_average</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:1:1" typref="2701647786" value="sum"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:1:1" typref="2701647786" value="sum"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:1:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:1" typref="2701647786" value="sum"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:2:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:2:1:2:2" typref="103245008"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:2:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:2:1" typref="103245008" value="measures"/>
+<EmptySet tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:2:1:2:2" typref="103245008"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:3:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:1:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:2:1:3:2" typref="3603043417" value="INT"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:3:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="/" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:3:1:2:1:1" typref="2701647786" value="sum"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:2:3:1:3:1:2:1:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+</ANY_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_minimum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_minimum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:1:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:2:2" typref="2701647786" value="ii"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:2:1:2:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:3:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:3:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:3:3:1:3:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+</ANY_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_maximum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_maximum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:1" typref="103245008" value="measures"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:2:1:2:2" typref="3603043417" value="INT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:1:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:1:2:2:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:2:2" typref="2701647786" value="ii"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:3:1:1" typref="103245008" value="measures"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:1:3:2" typref="2701647786" value="2"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:2:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:2:1:2:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:3:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:3:1:2:1:1" typref="103245008" value="measures"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:4:4:3:1:3:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Then>
+</ANY_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="103245008">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:1:1:1:1" value="INTEGER"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:2:1" value="BOOL"/>
+</Type>
+<Type id="2701647786">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:3:1" value="INTEGER"/>
+</Type>
+<Type id="3083833907">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:4:1:1:1:1" value="INTEGER"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:4:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:5:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:6:1:1" value="BOOL"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:7:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3672872563">
+<Binary_Exp op="*">
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:8:1:1" value="INTEGER"/>
+<Id tag="C:\Users\istva\Suli\formalis\beadando2_v2\bdp\m1.bxml:1:5:8:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

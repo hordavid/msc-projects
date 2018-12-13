@@ -1,0 +1,4 @@
+digraph {
+machine [ label=" machine " shape= box ]
+
+}

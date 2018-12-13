@@ -1,0 +1,81 @@
+﻿/* utils
+ * Author: Magnucz Ferenc
+ * Neptun kód: NT76QQ
+ * Creation date: 2016.05.04.
+ *
+ * Informal specification:
+ * -----------------------
+ * segéd eljárások gyűjtőhelye.
+ * is_prim : megállapítja, hogy a paraméterként megadott szám prím szám e vagy sem.
+ */
+
+IMPLEMENTATION
+    utils_i
+
+REFINES
+    utils
+
+DEFINITIONS
+    "common.def"
+
+LOCAL_OPERATIONS
+    ret <-- l_is_prim ( p_num ) =
+    PRE
+        p_num : NAT
+        & p_num >= 2
+    THEN
+        ANY
+            v_ret
+        WHERE
+            v_ret : BOOL
+            & v_ret = bool ( IS_PRIM ( p_num ) )
+        THEN
+            ret := v_ret
+        END
+    END
+
+OPERATIONS
+    ret <-- l_is_prim ( p_num ) =
+    BEGIN
+        VAR v_mm , v_ii , v_prim IN
+            v_ii   := 2 ;
+            v_mm   := 0 ;
+            v_prim := TRUE ;
+
+            WHILE v_prim = TRUE & v_ii < p_num DO
+                v_mm := p_num mod v_ii ;
+                IF v_mm = 0 THEN
+                    v_prim := FALSE
+                END ;
+                v_ii := v_ii + 1
+            INVARIANT
+                p_num : NAT
+                & p_num >= 2
+                & v_prim : BOOL
+                & v_ii : 2 .. p_num
+                & ( v_prim = TRUE => ! kk . ( kk : 2 .. v_ii - 1 => ( p_num mod kk ) /= 0 ) )
+                & ( v_prim = FALSE => ( v_ii - 1 : 2 .. p_num - 1 & ( p_num mod ( v_ii - 1 ) ) = 0 ) )
+            VARIANT
+                p_num - v_ii
+            END ;
+
+            ret := v_prim
+        END
+    END
+    ;
+
+    ret <-- is_prim_op ( p_num ) =
+    BEGIN
+        ret <-- l_is_prim ( p_num )
+    END
+    ;
+
+    ret <-- is_prim_op2 ( p_num ) =
+    BEGIN
+        IF 2 <= p_num THEN
+            ret <-- l_is_prim ( p_num )
+        ELSE
+            ret := FALSE
+        END
+    END
+END

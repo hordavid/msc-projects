@@ -1,0 +1,11 @@
+DEFINITIONS
+    MIN_IDX == 0 ;
+    MAX_IDX == 10 ;
+    MIN_VAL_TYPE == 0 ;
+    MAX_VAL_TYPE == 100 ;
+    VAL_TYPE == MIN_VAL_TYPE..MAX_VAL_TYPE ;
+    TOMB_IDX == MIN_IDX..MAX_IDX ;
+    TOMB_TYPE == TOMB_IDX --> VAL_TYPE ;
+    IS_PRIM(aa) == (2 <= (aa)) & !zz.(zz:2..((aa)-1) => (((aa) mod zz) /= 0)) ;
+    NO_PRIM(aa) == (#kk.(kk:2..((aa)-1) & aa mod kk = 0))) ;
+    

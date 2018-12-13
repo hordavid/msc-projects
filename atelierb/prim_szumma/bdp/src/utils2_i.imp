@@ -1,0 +1,87 @@
+﻿/* utils2_i
+ * Author: Magnucz Ferenc
+ * Neptun kód: NT76QQ
+ * Creation date: 2016.05.15.
+ *
+ * Informal specification:
+ * -----------------------
+ * Segéd eljárások gyűjtőhelye.
+ * 
+ * prim_osszeg(tomb):
+ * A tomb-ben lévő prímszámok összegét adja vissza.
+ *
+ * prim_darab(tomb):
+ * A tomb-ben lévő prímszámok darabszámát adja vissza. 
+ *
+ */
+
+IMPLEMENTATION utils2_i
+REFINES utils2
+
+
+
+
+IMPORTS
+    utils
+
+OPERATIONS
+    ret <-- prim_osszeg ( tomb ) =
+        VAR ii , ossz , akt , prim IN
+            ii := 1 ;
+            ossz := 0 ;
+                akt := 1 ;
+                prim := FALSE ;
+
+                WHILE ii <= 10 DO
+                        akt := tomb ( ii ) ;
+            prim <-- is_prim_op2 ( akt ) ;
+
+                        IF TRUE = prim
+                        THEN
+                                ossz := ossz + akt
+                        END ;
+                        ii := ii + 1
+                INVARIANT
+                    tomb : 1 .. 10 --> 1 .. 100 &
+                        ii : 1 .. 11 &
+                        akt : 1 .. 100 &
+                        0 <= ossz &
+                        ossz <= ( ii - 1 ) * 100 &
+                        ossz = SIGMA jj . ( jj : 1 .. ii - 1 | { TRUE |-> tomb ( jj ) , FALSE |-> 0 } ( bool ( ( 2 <= ( tomb ( jj ) ) ) & ! zz . ( zz : 2 .. ( ( tomb ( jj ) ) - 1 ) => ( ( ( tomb ( jj ) ) mod zz ) /= 0 ) ) ) ) )
+                VARIANT
+                        11 - ii
+                END ;
+                ret := ossz
+        END
+    ;
+
+    ret <-- prim_darab ( tomb ) =
+    VAR ii , darab , akt , prim IN
+        ii := 1 ;
+        darab := 0 ;
+        akt := 0 ;
+        prim := FALSE ;
+
+        WHILE ii /= 11 DO
+            akt := tomb ( ii ) ;
+            prim <-- is_prim_op2 ( akt ) ;
+
+            IF TRUE = prim
+            THEN
+                darab := darab + 1
+            END ;
+            ii := ii + 1
+        INVARIANT
+            ii : NAT &
+            tomb : 1 .. 10 --> 1 .. 100 &
+            ii : 1 .. 11 &
+            darab : 0 .. 10 &
+            darab < ii &
+            darab = SIGMA ( jj ) . ( jj : ( 1 .. ( ii - 1 ) ) | { TRUE |-> 1 , FALSE |-> 0 } ( bool ( ( 2 <= ( tomb ( jj ) ) ) & ! zz . ( zz : 2 .. ( ( tomb ( jj ) ) - 1 ) => ( ( ( tomb ( jj ) ) mod zz ) /= 0 ) ) ) ) )
+        VARIANT
+            11 - ii
+        END ;
+        ret := darab
+    END
+
+ END

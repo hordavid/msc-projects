@@ -1,0 +1,4 @@
+digraph {
+incomes_m [ label=" incomes_m " shape= box ]
+
+}

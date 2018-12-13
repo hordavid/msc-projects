@@ -1,0 +1,16 @@
+-- WARNING : some components of this project have not been fully proved
+-- THERE ARE THEREFORE NO GUARANTEES ABOUT THIS FILE
+package body sets is
+	function succ(x : in INTEGER) return INTEGER is
+	begin
+		return x + 1 ;
+	end succ ;
+	function pred(x : in INTEGER) return INTEGER is
+	begin
+		return x - 1 ;
+	end pred ;
+	function bool(x : in BOOLEAN) return BOOLEAN is
+	begin
+		return x ;
+	end bool ;
+end sets ;

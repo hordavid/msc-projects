@@ -1,0 +1,82 @@
+﻿<component_checksums>
+<base>
+<symbol name="NAME" value="core" />
+<symbol name="TYPE" value="0" />
+<symbol name="PARAM" />
+<symbol name="CONSTRAINTS" />
+<symbol name="SEES" />
+<symbol name="INCLUDES" />
+<symbol name="IMPORTS" />
+<symbol name="PROMOTES" />
+<symbol name="EXTENDS" />
+<symbol name="USES" />
+<symbol name="SETS" />
+<symbol name="CONCRETE_VAR" value="c2fc1442467b0f49233caffb7425d9a6" />
+<symbol name="ABSTRACT_VAR" />
+<symbol name="CONCRETE_CONST" />
+<symbol name="ABSTRACT_CONST" />
+<symbol name="PROPERTIES" />
+<symbol name="INVARIANT" value="3a7451d92f72e4df99cfe53c8c9e3246" />
+<symbol name="VARIANT" />
+<symbol name="ASSERTIONS" />
+<symbol name="VALUES" />
+<operations>
+<operation>
+<symbol name="NAME" value="INITIALISATION" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="b60d0c0ac56f4266331196c3b8d890c8" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="beir" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="35b9c183981866ad3aa1c7b06748957a" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="muvelet" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" value="c9a74e546142e8fcd1345a1d4ca73234" />
+<symbol name="BODY" value="825304ec2840401a7db5e04dff53ac71" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="kiir" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="08b43519a7e36ee4c6c5615d1663bcfd" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</operations>
+</base>
+<seen>
+</seen>
+<used>
+</used>
+<included>
+</included>
+<imported>
+</imported>
+<extended>
+</extended>
+<refined>
+</refined>
+</component_checksums>

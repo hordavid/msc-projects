@@ -1,0 +1,10 @@
+digraph {
+adder_i [ label=" adder\nadder_i " shape= box ]
+core_i [ label=" core\ncore_i " shape= box ]
+counter_i [ label=" counter\ncounter_i " shape= box ]
+main_i [ label=" main\nmain_i " shape= box ]
+
+"core_i" -> "counter_i" []
+"core_i" -> "adder_i" []
+"main_i" -> "core_i" []
+}

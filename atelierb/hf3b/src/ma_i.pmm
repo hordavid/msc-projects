@@ -1,0 +1,3 @@
+THEORY User_Pass IS
+Operation(mtrb) & Pattern((a<+{b|->c})(d) = bool(e(d)+f<=g)) & ff(0) & dd & ah(ii$0 = ii$0+1-1) & pr & dd & eh(ii$0+1-1,_h,AllHyp) & dd & dc(jj = ii$0) & pr & dd & ah((tbc$2<+{ii$0|->TRUE})(jj) = tbc$2(jj)) & ar(s1.12,Goal) & pr & dd & eh((tbc$2<+{ii$0|->TRUE})(jj),_h,Goal) & ph(jj,!jj.(jj: 1..ii$0-1 => tbc$2(jj) = bool(tuc$1(jj)+1<=0))) & ah(not(jj = ii$0) & jj: 1..ii$0) & pr & pr & pp(rp.0)
+END

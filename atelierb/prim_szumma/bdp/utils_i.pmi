@@ -1,0 +1,128 @@
+﻿THEORY BalanceX IS
+  utils_i,34,6,0,28,0,0,0;
+  ValuesLemmas,0,0,0,0,0,0,0;
+  Initialisation,0,0,0,0,0,0,0;
+  is_prim_op,0,0,0,0,0,0,0;
+  is_prim_op2,0,0,0,0,0,0,0;
+  l_is_prim,0,0,0,0,0,0,0;
+  refinement_of_l_is_prim,34,6,0,28,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  dd & dc(v_prim$7777,BOOL) & dd & ah(2<=p_num & !zz.(zz: 2..p_num-1 => not(p_num mod zz = 0))) & pr & ah(p_num-1 = v_ii$7777-1) & ah(p_num = v_ii$7777) & ah(v_ii$7777<=p_num & p_num<v_ii$7777+1) & ah(v_ii$7777: 2..p_num) & pp(rp.0) & pr & ah(not(v_prim$7777 = TRUE & v_ii$7777+1<=p_num) & v_prim$7777 = TRUE & v_ii$7777<=p_num) & pr & pr & pr & ah(v_ii$7777: 2..p_num) & pp(rp.0) & pr & pr & pr & pr & dd & pr & se(v_ii$7777-1) & pr;
+  pr;
+  pr;
+  ah(v_ii+1-1 = v_ii) & pr & dd & dd & dc(kk<=v_ii-1) & dd & ph(kk,!kk.(kk: 2..v_ii-1 => not(p_num mod kk = 0))) & ah(kk: 2..v_ii & kk<=v_ii-1) & eh(v_ii,v_ii+1-1,Goal) & pr & pr & pp(rp.0) & dd & ah(kk = v_ii) & pr & ah(not(kk<=v_ii-1) & kk: 2..v_ii) & pr & eh(v_ii,v_ii+1-1,Goal) & pr & pp(rp.0);
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  dd & ar(b1.59,Once);
+  dd & ah(0<=p_num mod v_ii) & ar(b1.59,Once) & pr;
+  dd & ah(v_ii<=2147483647) & pr & dd & ar(b1.46,Once);
+  dd & ar(b1.61,Once);
+  pr;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO,genDivergencePO == KO,genWDPO == KO,local_op == OK);
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

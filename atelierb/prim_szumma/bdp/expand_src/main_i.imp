@@ -1,0 +1,19 @@
+/* main_i
+ * Author: 
+ * Creation date: 2016.05.13.
+ */
+IMPLEMENTATION
+   main_i
+REFINES
+   main
+IMPORTS
+    BASIC_IO ,
+    core
+OPERATIONS
+    main_op =
+    BEGIN
+        beir ;
+        muvelet ;
+        kiir
+    END
+END

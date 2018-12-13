@@ -1,0 +1,97 @@
+﻿/* core_i
+ * Author: Magnucz Ferenc
+ * Neptun kód: NT76QQ
+ * Creation date: 2016.05.15.
+ *
+ * Informal specification:
+ * -----------------------
+ * A bekért adatok között lévő prím számok összegét és darabszámát adja vissza.
+ *
+ */
+IMPLEMENTATION
+   core_i
+REFINES
+    core
+
+DEFINITIONS
+    "common.def"
+
+SEES
+    BASIC_IO
+
+IMPORTS
+    utils2
+
+CONCRETE_CONSTANTS
+    Elemszam
+
+PROPERTIES
+    Elemszam : INT
+    & Elemszam = ( MAX_IDX - MIN_IDX )
+
+VALUES
+    Elemszam = ( MAX_IDX - MIN_IDX )
+
+INITIALISATION
+    tomb := ( 1 .. 10 ) * { 1 } ;
+    darab := 0 ;
+    osszeg := 0
+OPERATIONS
+    beir =
+    VAR ii , elem IN
+        STRING_WRITE ( "Adjon meg " ) ;
+        INT_WRITE ( Elemszam ) ;
+        STRING_WRITE ( " db. számot.\n" ) ;
+
+        elem := 0 ;
+        ii := 1 ;
+        WHILE ii <= 10 DO
+            INT_WRITE ( ii ) ; STRING_WRITE ( ": " ) ;
+                    elem <-- INTERVAL_READ ( 1 , 100 ) ;
+            tomb ( ii ) := elem ;
+            ii := ii + 1
+        INVARIANT
+            ii : 1 .. 11 &
+            tomb : 1 .. 10 --> 1 .. 100
+        VARIANT
+            11 - ii
+        END ;
+        STRING_WRITE ( "\n" )
+    END
+    ;
+
+    muvelet =
+    BEGIN
+        darab <-- prim_darab ( tomb ) ;
+        osszeg <-- prim_osszeg ( tomb )
+    END
+    ;
+
+    kiir =
+    VAR ii , elem IN
+        STRING_WRITE ( "Megadott adatok: " ) ;
+        elem := 0 ;
+        ii := 1 ;
+        WHILE ii <= 10 DO
+            elem := tomb ( ii ) ;
+            IF 1 /= ii THEN
+                STRING_WRITE ( ", " )
+            END ;
+            INT_WRITE ( ii ) ;
+            ii := ii + 1
+        INVARIANT
+            ii : 1 .. 11 &
+            tomb : 1 .. 10 --> 1 .. 100
+        VARIANT
+            11 - ii
+        END ;
+        STRING_WRITE ( "\n\n" ) ;
+
+                INT_WRITE ( darab ) ;
+                STRING_WRITE ( " db prim szam van a tombben\n" ) ;
+
+                STRING_WRITE ( "Ezek osszege: " ) ;
+                INT_WRITE ( osszeg ) ;
+                STRING_WRITE ( "\n" )
+    END
+END

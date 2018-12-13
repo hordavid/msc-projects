@@ -1,0 +1,14 @@
+ATB*ATB*Encoding:UTF-8
+ATB*POG*Generate_Obvious_PO:FALSE
+ATB*POG*Generate_WD_PO:FALSE
+ATB*ATB*Proof_Obligations_Generator_NG:TRUE
+ATB*PR*Pr_3_7_compatibility:FALSE
+ATB*PR*Pr_3_6_compatibility:FALSE
+ATB*PR*Enable_TC_Command:FALSE
+ATB*PR*Trace_User_Rules:FALSE
+ATB*ATB*Show_Status_Project_NbPri_NbPra:FALSE
+ATB*POG*Generate_B0_Conditions_NG:TRUE
+ATB*TC*Generate_B0_Conditions:TRUE
+ATB*TC*Check_B0_Array:TRUE
+ATB*POG*Why3:FALSE
+ATB*TC*Enable_Extended_Sees:FALSE

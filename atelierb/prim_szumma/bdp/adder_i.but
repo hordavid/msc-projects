@@ -1,0 +1,1 @@
+Flag(FileOn("adder_i.res")) & Set(toto | ossz+tomb(ii) = SIGMA(jj).(jj: 1..ii+1-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(tomb(jj) mod 2 = 1))))

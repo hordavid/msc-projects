@@ -1,0 +1,142 @@
+﻿THEORY BalanceX IS
+  counter_i,39,3,0,36,0,0,0;
+  ValuesLemmas,0,0,0,0,0,0,0;
+  InstanciatedConstraintsLemmas,0,0,0,0,0,0,0;
+  Initialisation,0,0,0,0,0,0,0;
+  f_megszamol,39,3,0,36,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  dd & ah(1..ii-1\/{ii} = 1..ii) & pr & ah(1<=ii) & ah(ii: 1..11) & pp(rp.0) & dd & ar(SimplifySetUniXY.7,Goal) & pr & dd & ah(0 = SIGMA(jj).(jj: {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz: 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & pr & ah(FALSE = bool(2<=tomb(ii) & !zz.(zz: 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0)))) & ah(v_ret = FALSE) & pr & dd & eh(FALSE,_h,Goal) & pr & pr & dd & ah(darab = darab+0) & pr & dd & ah(darab+0 = darab+SIGMA(jj).(jj: {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz: 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & eh(SIGMA(jj).(jj: {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz: 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),_h,Goal) & pr & dd & eh(darab,_h,Goal) & eh(darab+0,_h,Goal) & eh(darab,SIGMA(jj).(jj: 1..ii-1 | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz: 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),Goal) & ah(ii+1-1 = ii) & pr & dd & eh(ii+1-1,_h,Goal) & eh(1..ii,_h,Goal) & ah(1..ii-1/\{ii} = {}) & pr & dd & ar(s1.3,Goal) & pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  dd & ah(ii+1-1 = ii) & pr & dd & eh(ii+1-1,_h,Goal) & ah(1 = SIGMA(jj).(jj: {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz: 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & pr & ah(TRUE = bool(2<=tomb(ii) & !zz.(zz: 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0)))) & eh(TRUE,_h,Goal) & pr & eh(bool(2<=tomb(ii) & !zz.(zz: 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0))),_h,Goal) & pr & dd & ah(1..ii-1\/{ii} = 1..ii) & ah(1<=ii) & ah(ii: 1..11) & pp(rp.0) & dd & ar(SimplifySetUniXY.7,Goal) & pr & dd & eh(1..ii,_h,Goal) & ah(darab+1 = darab+SIGMA(jj).(jj: {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz: 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & eh(SIGMA(jj).(jj: {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz: 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),_h,Goal) & pr & dd & eh(darab+1,_h,Goal) & eh(darab,_h,Goal) & ah(1..ii-1/\{ii} = {}) & pr & dd & ar(s1.3,Goal) & pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  dd & pr & ar(s1.6,Goal) & pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO,genDivergencePO == KO,genWDPO == KO,local_op == OK);
+  PRVersion("svn")(CLT == "V4.0-7795");
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

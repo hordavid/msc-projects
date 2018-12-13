@@ -1,0 +1,23 @@
+V "GNAT Lib v4.6"
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U sets%b		sets.adb		fe77ab25 NE OO PK IL
+
+U sets%s		sets.ads		62486afe BN EE NE OO PK IL
+
+D sets.ads		20160514010314 62486afe
+D sets.adb		20160514010314 9c3fc1db
+D system.ads		20140416172229 23e1f70b
+X 1 sets.ads
+4K9*sets 16l5 16e9 2|4b14 17l5 17t9
+6V18*succ{integer} 6>23 15r23 2|5b18 8l13 8t17
+6i23 x{integer} 2|5b23 7r24
+7V18*pred{integer} 7>23 15r29 2|9b18 12l13 12t17
+7i23 x{integer} 2|9b23 11r24
+8V18*bool{boolean} 8>23 15r35 2|13b18 16l13 16t17
+8b23 x{boolean} 2|13b23 15r24
+10i9*MAXINT{integer}
+11i9*MININT{integer}
+13A14*array_type_1(integer)<integer>
+

@@ -1,0 +1,44 @@
+THEORY ProofList IS
+_f(1) & _f(14) & _f(15) & set_income.2,(_f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(23) & _f(24) & _f(25) & _f(26) & _f(16) & _f(3) => _f(28));
+_f(1) & _f(14) & _f(15) & set_income.1,(_f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(23) & _f(24) & _f(25) & _f(26) & _f(16) & _f(3) => _f(27));
+_f(1) & Initialisation.6,(_f(3) & _f(12) => _f(13));
+_f(1) & Initialisation.5,(_f(2) & _f(3) => _f(11));
+_f(1) & Initialisation.4,(_f(2) & _f(3) => _f(10));
+_f(1) & Initialisation.3,(_f(3) & _f(8) => _f(9));
+_f(1) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((jj) : (dom((((1) .. (7)) * {0}))));
+"Invariant is preserved";
+"Check invariant ((incomes) : (((((1) .. (7))) --> (((0) .. (1000000))))))";
+(((((1) .. (7)) * {0})) : (((((1) .. (7))) --> (((0) .. (1000000))))));
+"Check invariant ((min_d) : (((1) .. (7))))";
+((1) : (((1) .. (7))));
+"Check invariant ((sum_i) : (((0) .. ((1000000 * 7)))))";
+((0) : (((0) .. ((1000000 * 7)))));
+(((((1) .. (7)) * {0}) )(1) <= ((((1) .. (7)) * {0}) )(jj));
+(((((1) .. (7)) * {0}) )(jj) <= ((((1) .. (7)) * {0}) )(1));
+"Check invariant ((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))";
+((0) = (SIGMA(ii).(((ii) : (dom((((1) .. (7)) * {0})))) | ((((1) .. (7)) * {0}) )(ii))));
+incomes : ((1) .. (7)) +-> ((0) .. (1000000)) & dom(incomes) = ((1) .. (7)) & ((incomes) : (((((1) .. (7))) --> (((0) .. (1000000)))))) & ((min_d) : (((1) .. (7)))) & ((max_d) : (((1) .. (7)))) & ((sum_i) : (((0) .. ((1000000 * 7))))) & !(jj).(((((jj) : (dom(incomes)))) => (((incomes )(max_d) <= (incomes )(jj))))) & !(jj).(((((jj) : (dom(incomes)))) => (((incomes )(jj) <= (incomes )(min_d))))) & ((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))));
+((day) : (dom(incomes))) & ((income) : (((0) .. (1000000)))) & (((incomes )(day)) : (((0) .. (1000000))));
+((jj) : (dom(t_incomes)));
+t_incomes : ((1) .. (7)) +-> ((0) .. (1000000));
+dom(t_incomes) = ((1) .. (7));
+((t_incomes) : (((((1) .. (7))) --> (((0) .. (1000000))))));
+((t_min) : (((1) .. (7))));
+((t_max) : (((1) .. (7))));
+((t_sum) : (((0) .. ((1000000 * 7)))));
+!(jj).(((((jj) : (dom(t_incomes)))) => (((t_incomes )(t_max) <= (t_incomes )(jj)))));
+!(jj).(((((jj) : (dom(t_incomes)))) => (((t_incomes )(jj) <= (t_incomes )(t_min)))));
+((t_sum) = (SIGMA(ii).(((ii) : (dom(t_incomes))) | (t_incomes )(ii))));
+((t_incomes) = (((incomes) <+ ({((day) |-> (income))}))));
+((t_incomes )(t_max) <= (t_incomes )(jj));
+((t_incomes )(jj) <= (t_incomes )(t_min))
+END
+&
+THEORY EnumerateX
+END

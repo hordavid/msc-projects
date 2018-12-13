@@ -1,0 +1,25 @@
+/* main_i
+ * Author: Magnucz Ferenc
+ * Neptun kód: NT76QQ
+ * Creation date: 2016.05.15.
+ *
+ * Informal specification:
+ * -----------------------
+ * Főprogram
+ *
+ */
+IMPLEMENTATION
+   main_i
+REFINES
+   main
+IMPORTS
+    BASIC_IO,
+    core
+OPERATIONS
+    main_op =
+    BEGIN
+        beir;
+        muvelet;
+        kiir
+    END
+END

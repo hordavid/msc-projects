@@ -1,0 +1,37 @@
+﻿THEORY BalanceX IS
+  core,4,0,0,4,0,0,0;
+  Initialisation,4,0,0,4,0,0,0;
+  beir,0,0,0,0,0,0,0;
+  muvelet,0,0,0,0,0,0,0;
+  kiir,0,0,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO, genDivergencePO == KO, genWDPO == KO, local_op == OK);
+  PRVersion("svn")(CLT == "V4.0-7795");
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

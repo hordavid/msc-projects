@@ -1,0 +1,2570 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:2:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:3:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:3:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>add</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:1" typref="2701647786" value="item"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:2:1" typref="2701647786" value="0"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:1:2" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:1:3" typref="2043437594" value="t_is_full"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:1" typref="103245008" value="t_xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:2:1" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:3:1" typref="2043437594" value="t_is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:4:1" typref="103245008" value="t_xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:4:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="ran" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:5:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Binary_Exp op="\/" typref="3603043417">
+<Unary_Exp op="ran" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:5:2:2:1" typref="2701647786" value="item"/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Binary_Exp op="+" typref="2701647786">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:2:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:2:2:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:1:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:1:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:1:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:2:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:3:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:3:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:2:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:1:2:1" typref="103245008" value="t_xx"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:2:2:1" typref="2043437594" value="t_is_empty"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:3:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:3:2:1" typref="2043437594" value="t_is_full"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>empty</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:2:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:3:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:3:2:1" typref="2043437594" value="FALSE"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_min</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:1:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:2:1" typref="2701647786" value="0"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<If_Sub elseif="no">
+<Condition>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:1:2:1:1" typref="103245008" value="xx"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:1:2:1:2" typref="2701647786" value="0"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:2:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:3:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:3:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+<Else>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:2" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:3" typref="2043437594" value="t_is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:4" typref="2701647786" value="t_min"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:1" typref="103245008" value="t_xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:2:1" typref="2701647786" value="t_min"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:3:1" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:4:1" typref="2043437594" value="t_is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:4:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:5:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:5:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:6:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:6:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:7:1" typref="103245008" value="t_xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:7:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:8:1" typref="2701647786" value="t_min"/>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:8:2:1" typref="103245008" value="xx"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:8:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:1:2" typref="2701647786" value="kk"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:1:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:2:1" typref="2701647786" value="kk"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:3:2" typref="2701647786" value="kk"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:2:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:2:2" typref="2701647786" value="kk"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:1:2:1" typref="103245008" value="t_xx"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:2:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:2:2:1" typref="2701647786" value="t_min"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:3:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:3:2:1" typref="2043437594" value="t_is_empty"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:4:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:4:2:1" typref="2043437594" value="t_is_full"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Else>
+</If_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>is_empty_op</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:4:2:1:1:1" typref="2043437594" value="ret"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:4:2:1:2:1" typref="2043437594" value="is_empty"/>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>is_full_op</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:5:2:1:1:1" typref="2043437594" value="ret"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:5:2:1:2:1" typref="2043437594" value="is_full"/>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Well_Definedness>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((xx) : (((((0) .. (100))) +-&gt; (((0) .. (100))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:1" typref="103245008" value="xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_empty) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:1" typref="2043437594" value="is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((is_full) : (BOOL))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:1" typref="2043437594" value="is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((xx) : (FIN(xx)))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:1" typref="103245008" value="xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:4:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (TRUE))  =&gt; ((card(xx)) = (0))) &amp; (((card(xx)) = (0)) =&gt; ((is_empty) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:5:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_empty) = (FALSE))  =&gt; (0 +1 &lt;= card(xx))) &amp; ((0 +1 &lt;= card(xx)) =&gt; ((is_empty) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:1" typref="2043437594" value="is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:6:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (TRUE))  =&gt; ((card(xx)) = (100))) &amp; (((card(xx)) = (100)) =&gt; ((is_full) = (TRUE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:7:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;" initialTag="(((is_full) = (FALSE))  =&gt; (card(xx) +1 &lt;= 100)) &amp; ((card(xx) +1 &lt;= 100) =&gt; ((is_full) = (FALSE)))">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:1" typref="2043437594" value="is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:8:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Quantified_Pred initialTag="!(ii,jj).((((1 +1 &lt;= card(xx)) &amp; ((ii) : (dom(xx))) &amp; ((jj) : (dom(xx))) &amp; (jj +1 &lt;= ii)) =&gt; (((xx )(jj) +1 &lt;= (xx )(ii)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:3:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:1:4:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:1" typref="103245008" value="xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:2:1:9:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Nary_Pred>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Well_Definedness>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:2:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:3:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:3:1:3:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_add</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:1" typref="2701647786" value="item"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:2:1" typref="2701647786" value="0"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_add</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:1" typref="2701647786" value="item"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:2:1" typref="2701647786" value="0"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:2:1:2:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:1:2" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:1:3" typref="2043437594" value="t_is_full"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:1" typref="103245008" value="t_xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:2:1" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:2:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:3:1" typref="2043437594" value="t_is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:4:1" typref="103245008" value="t_xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:4:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="ran" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:5:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Binary_Exp op="\/" typref="3603043417">
+<Unary_Exp op="ran" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:5:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:5:2:2:1" typref="2701647786" value="item"/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:2:1" typref="2701647786" value="1"/>
+<Binary_Exp op="+" typref="2701647786">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:2:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:6:2:2:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:1:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:1:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:1:2" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:1:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:2:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:2:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:3:1" typref="2701647786" value="ii"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:1:3:2" typref="2701647786" value="jj"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:2:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:7:2:2:1:2:2:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:8:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:9:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:10:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:2:1:11:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:1:2:1" typref="103245008" value="t_xx"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:2:2:1" typref="2043437594" value="t_is_empty"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:3:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:1:3:1:3:1:3:2:1" typref="2043437594" value="t_is_full"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_empty</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Exp_Comparison op=":">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_empty</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:1:1:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:1:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:2:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:3:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:2:2:1:3:2:1" typref="2043437594" value="FALSE"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_min</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:1:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:2:1" typref="2701647786" value="0"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_min</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:1:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:2:1" typref="2701647786" value="0"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:2:1:2:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<If_Sub elseif="no">
+<Condition>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:1:1:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:1:1:2" typref="2701647786" value="1"/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:1:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:1:2:1:1" typref="103245008" value="xx"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:1:2:1:2" typref="2701647786" value="0"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:2:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:2:2:1" typref="2043437594" value="TRUE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:3:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<EmptySet tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:2:1:3:2:1" typref="3817003670"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+<Else>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:2" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:3" typref="2043437594" value="t_is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:1:4" typref="2701647786" value="t_min"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:1" typref="103245008" value="t_xx"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:1:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:2:1" typref="2701647786" value="t_min"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:2:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:3:1" typref="2043437594" value="t_is_empty"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:4:1" typref="2043437594" value="t_is_full"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:4:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:5:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:5:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:5:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:6:1:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:6:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:6:2:2" typref="2701647786" value="100"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:7:1" typref="103245008" value="t_xx"/>
+<Unary_Exp op="FIN" typref="3083833907">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:7:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:8:1" typref="2701647786" value="t_min"/>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:8:2:1" typref="103245008" value="xx"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:8:2:2:1" typref="103245008" value="xx"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:1:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:1:2" typref="2701647786" value="kk"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:1:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:2:1" typref="2701647786" value="kk"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:2:2:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:3:1" typref="2701647786" value="jj"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:1:3:2" typref="2701647786" value="kk"/>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="&gt;">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:1:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:2:1" typref="103245008" value="t_xx"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:9:2:1:2:2:2" typref="2701647786" value="kk"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:10:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:1:1" typref="2043437594" value="t_is_empty"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:11:2:2" typref="2701647786" value="0"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:12:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="&lt;=&gt;">
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:1:1" typref="2043437594" value="t_is_full"/>
+<Boolean_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:2:1:1" typref="103245008" value="t_xx"/>
+</Unary_Exp>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:2:1:13:2:2" typref="2701647786" value="100"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:1:1:1" typref="103245008" value="xx"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:1:2:1" typref="103245008" value="t_xx"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:2:1:1" typref="2701647786" value="ret"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:2:2:1" typref="2701647786" value="t_min"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:3:1:1" typref="2043437594" value="is_empty"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:3:2:1" typref="2043437594" value="t_is_empty"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:4:1:1" typref="2043437594" value="is_full"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:3:3:1:3:1:3:1:4:2:1" typref="2043437594" value="t_is_full"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Else>
+</If_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_is_empty_op</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_is_empty_op</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:4:2:1:1:1" typref="2043437594" value="ret"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:4:2:1:2:1" typref="2043437594" value="is_empty"/>
+</Values>
+</Simple_Assignement_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_is_full_op</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_is_full_op</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:5:2:1:1:1" typref="2043437594" value="ret"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:4:5:2:1:2:1" typref="2043437594" value="is_full"/>
+</Values>
+</Simple_Assignement_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="103245008">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:1:1:1:1" value="INTEGER"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:2:1" value="BOOL"/>
+</Type>
+<Type id="3083833907">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:3:1:1:1:1" value="INTEGER"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:3:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:4:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:5:1" value="INTEGER"/>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:6:1:1" value="BOOL"/>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="C:\Users\Developer\projects\elte\atelierb\hf3_iyb4jh\bdp\queue_m.bxml:1:5:7:1:1"/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

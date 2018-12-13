@@ -1,0 +1,422 @@
+﻿<component_checksums>
+<base>
+<symbol name="NAME" value="core_i" />
+<symbol name="TYPE" value="0" />
+<symbol name="PARAM" />
+<symbol name="CONSTRAINTS" />
+<symbol name="SEES" value="e49a5a26fe22a4f27e8301b7d12e1bbb" />
+<symbol name="INCLUDES" />
+<symbol name="IMPORTS" value="b76b82509317929f599ecfaa7e029014" />
+<symbol name="PROMOTES" />
+<symbol name="EXTENDS" />
+<symbol name="USES" />
+<symbol name="SETS" />
+<symbol name="CONCRETE_VAR" />
+<symbol name="ABSTRACT_VAR" />
+<symbol name="CONCRETE_CONST" value="d40fd8b810da712cb458a873c6f72ce5" />
+<symbol name="ABSTRACT_CONST" />
+<symbol name="PROPERTIES" value="a81559fb22b1a6a531335608a6a7956b" />
+<symbol name="INVARIANT" />
+<symbol name="VARIANT" />
+<symbol name="ASSERTIONS" />
+<symbol name="VALUES" value="d921b06ed916e92658418a401a69354d" />
+<operations>
+<operation>
+<symbol name="NAME" value="INITIALISATION" />
+<symbol name="COMPONENT" value="core_i" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="b937a71921f4dbba63a1911ff7f2889c" />
+<called>
+<operation>
+<symbol name="NAME" value="INITIALISATION" />
+<symbol name="COMPONENT" value="utils2" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="00000000000000000000000000000000" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</called>
+<refined>
+<operation>
+<symbol name="NAME" value="INITIALISATION" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="b60d0c0ac56f4266331196c3b8d890c8" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="beir" />
+<symbol name="COMPONENT" value="core_i" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="ad49e2e7af310c04e42ed8b780bf6307" />
+<called>
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="INT_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="aac9e1e110a98325a4f5be4acbfa92f4" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="INT_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="aac9e1e110a98325a4f5be4acbfa92f4" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="INTERVAL_READ" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="f0500f9380c70a7dca359c0f2fa66d5b" />
+<symbol name="BODY" value="b808d6678c6879ff98e7cdfb7e69241a" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</called>
+<refined>
+<operation>
+<symbol name="NAME" value="beir" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="35b9c183981866ad3aa1c7b06748957a" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="muvelet" />
+<symbol name="COMPONENT" value="core_i" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="6163ece7c102e983b3ed191b7f9ae0b4" />
+<called>
+<operation>
+<symbol name="NAME" value="prim_darab" />
+<symbol name="COMPONENT" value="utils2" />
+<symbol name="PRECONDITION" value="f2dd604d1b243a38cbeed1fc95a3e3db" />
+<symbol name="BODY" value="3857908707af0767939431155fef2f84" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="prim_osszeg" />
+<symbol name="COMPONENT" value="utils2" />
+<symbol name="PRECONDITION" value="c9a74e546142e8fcd1345a1d4ca73234" />
+<symbol name="BODY" value="ea6c47ee2551316de45efa5394c2bc35" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</called>
+<refined>
+<operation>
+<symbol name="NAME" value="muvelet" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" value="c9a74e546142e8fcd1345a1d4ca73234" />
+<symbol name="BODY" value="825304ec2840401a7db5e04dff53ac71" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="kiir" />
+<symbol name="COMPONENT" value="core_i" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="9fdcc1fdfd9a454b53ce0caa9d291374" />
+<called>
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="INT_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="aac9e1e110a98325a4f5be4acbfa92f4" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="INT_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="aac9e1e110a98325a4f5be4acbfa92f4" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="INT_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="aac9e1e110a98325a4f5be4acbfa92f4" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+<operation>
+<symbol name="NAME" value="STRING_WRITE" />
+<symbol name="COMPONENT" value="BASIC_IO" />
+<symbol name="PRECONDITION" value="6abeea151eb3274d25797d156af7fccf" />
+<symbol name="BODY" value="08c1e142b7f189c8de13571fc260b3bc" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</called>
+<refined>
+<operation>
+<symbol name="NAME" value="kiir" />
+<symbol name="COMPONENT" value="core" />
+<symbol name="PRECONDITION" />
+<symbol name="BODY" value="08b43519a7e36ee4c6c5615d1663bcfd" />
+<called>
+</called>
+<refined>
+</refined>
+</operation>
+
+</refined>
+</operation>
+
+</operations>
+</base>
+<seen>
+<base>
+<symbol name="NAME" value="BASIC_IO" />
+<symbol name="TYPE" value="1" />
+<symbol name="PARAM" />
+<symbol name="CONSTRAINTS" />
+<symbol name="SEES" />
+<symbol name="INCLUDES" />
+<symbol name="IMPORTS" />
+<symbol name="PROMOTES" />
+<symbol name="EXTENDS" />
+<symbol name="USES" />
+<symbol name="SETS" />
+<symbol name="CONCRETE_VAR" />
+<symbol name="ABSTRACT_VAR" />
+<symbol name="CONCRETE_CONST" />
+<symbol name="ABSTRACT_CONST" />
+<symbol name="PROPERTIES" />
+<symbol name="INVARIANT" />
+<symbol name="VARIANT" />
+<symbol name="ASSERTIONS" />
+<symbol name="VALUES" />
+<operations>
+</operations>
+</base>
+</seen>
+<used>
+</used>
+<included>
+</included>
+<imported>
+<base>
+<symbol name="NAME" value="utils2" />
+<symbol name="TYPE" value="1" />
+<symbol name="PARAM" />
+<symbol name="CONSTRAINTS" />
+<symbol name="SEES" />
+<symbol name="INCLUDES" />
+<symbol name="IMPORTS" />
+<symbol name="PROMOTES" />
+<symbol name="EXTENDS" />
+<symbol name="USES" />
+<symbol name="SETS" />
+<symbol name="CONCRETE_VAR" />
+<symbol name="ABSTRACT_VAR" />
+<symbol name="CONCRETE_CONST" />
+<symbol name="ABSTRACT_CONST" />
+<symbol name="PROPERTIES" />
+<symbol name="INVARIANT" />
+<symbol name="VARIANT" />
+<symbol name="ASSERTIONS" />
+<symbol name="VALUES" />
+<operations>
+</operations>
+</base>
+</imported>
+<extended>
+</extended>
+<refined>
+<component_checksums>
+<base>
+<symbol name="NAME" value="core" />
+<symbol name="TYPE" value="1" />
+<symbol name="PARAM" />
+<symbol name="CONSTRAINTS" />
+<symbol name="SEES" />
+<symbol name="INCLUDES" />
+<symbol name="IMPORTS" />
+<symbol name="PROMOTES" />
+<symbol name="EXTENDS" />
+<symbol name="USES" />
+<symbol name="SETS" />
+<symbol name="CONCRETE_VAR" value="c2fc1442467b0f49233caffb7425d9a6" />
+<symbol name="ABSTRACT_VAR" />
+<symbol name="CONCRETE_CONST" />
+<symbol name="ABSTRACT_CONST" />
+<symbol name="PROPERTIES" />
+<symbol name="INVARIANT" value="3a7451d92f72e4df99cfe53c8c9e3246" />
+<symbol name="VARIANT" />
+<symbol name="ASSERTIONS" />
+<symbol name="VALUES" />
+<operations>
+</operations>
+</base>
+<seen>
+</seen>
+<used>
+</used>
+<included>
+</included>
+<imported>
+</imported>
+<extended>
+</extended>
+<refined>
+</refined>
+</component_checksums>
+
+</refined>
+</component_checksums>

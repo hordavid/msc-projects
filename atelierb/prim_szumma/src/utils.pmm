@@ -1,0 +1,7 @@
+THEORY User_Pass IS
+Operation(Initialisation) & ff(0) & pr;
+Operation(init) & ff(0) & pr;
+Operation(is_prim) & ff(0) & pr;
+Operation(is_prim2) & ff(0) & pr;
+Operation(is_prim2) & ff(1) & pr
+END 

@@ -1,0 +1,25 @@
+-- /home/HN9W0P/AB/hf3_uj/lang/ada/hf3_uj.bod
+-- Project startup module
+-- We need all the specifications in order to solve the SEES links
+with main ;
+with basic_io ;
+with core ;
+with counter ;
+with adder ;
+procedure hf3_uj is
+	this : main.PTR_main ;
+begin
+	-- Allocation of main object
+	this := new main.TYPE_main ;
+	-- Create instances
+	main.IMPORTS(this) ;
+	-- Set SEES links
+	-- core SEES basic_io
+	core.SET_basic_io(this.ref_core, this.ref_basic_io) ;
+	-- Set links for glued variables
+	-- Initialise instances
+	main.INITIALISATION(this) ;
+	-- Call entry point
+	main.#main#main_op(this) ;
+	-- End of project
+end hf3_uj ;

@@ -1,0 +1,127 @@
+﻿THEORY ProofList IS
+  _f(1) & _f(2) & kiir.33,(_f(52) & _f(3) => _f(30));
+  _f(1) & _f(2) & kiir.32,(_f(52) & _f(3) => _f(57));
+  _f(1) & _f(2) & kiir.31,(_f(52) & _f(3) => _f(56));
+  _f(1) & _f(2) & kiir.30,(_f(52) & _f(3) => _f(55));
+  _f(1) & _f(2) & kiir.29,(_f(52) & _f(3) => _f(54));
+  _f(1) & _f(2) & kiir.28,(_f(52) & _f(3) => _f(53));
+  _f(1) & _f(2) & kiir.27,(_f(43) & _f(3) => _f(51));
+  _f(1) & _f(2) & kiir.26,(_f(43) & _f(3) => _f(50));
+  _f(1) & _f(2) & kiir.25,(_f(40) & _f(3) => _f(51));
+  _f(1) & _f(2) & kiir.24,(_f(40) & _f(3) => _f(50));
+  _f(1) & _f(2) & kiir.23,(_f(43) & _f(3) => _f(49));
+  _f(1) & _f(2) & kiir.22,(_f(43) & _f(3) => _f(48));
+  _f(1) & _f(2) & kiir.21,(_f(43) & _f(3) => _f(47));
+  _f(1) & _f(2) & kiir.20,(_f(43) & _f(3) => _f(46));
+  _f(1) & _f(2) & kiir.19,(_f(43) & _f(3) => _f(45));
+  _f(1) & _f(2) & kiir.18,(_f(43) & _f(3) => _f(44));
+  _f(1) & _f(2) & kiir.17,(_f(40) & _f(3) => _f(49));
+  _f(1) & _f(2) & kiir.16,(_f(40) & _f(3) => _f(48));
+  _f(1) & _f(2) & kiir.15,(_f(40) & _f(3) => _f(47));
+  _f(1) & _f(2) & kiir.14,(_f(40) & _f(3) => _f(46));
+  _f(1) & _f(2) & kiir.13,(_f(40) & _f(3) => _f(45));
+  _f(1) & _f(2) & kiir.12,(_f(40) & _f(3) => _f(44));
+  _f(1) & _f(2) & kiir.11,(_f(43) & _f(3) => _f(42));
+  _f(1) & _f(2) & kiir.10,(_f(40) & _f(3) => _f(42));
+  _f(1) & _f(2) & kiir.9,(_f(40) & _f(3) => _f(41));
+  _f(1) & _f(2) & kiir.8,(_f(35) & _f(3) => _f(39));
+  _f(1) & _f(2) & kiir.7,(_f(35) & _f(3) => _f(38));
+  _f(1) & _f(2) & kiir.6,(_f(35) & _f(3) => _f(37));
+  _f(1) & _f(2) & kiir.5,(_f(35) & _f(3) => _f(36));
+  _f(1) & _f(2) & kiir.4,(_f(32) & _f(3) => _f(34));
+  _f(1) & _f(2) & kiir.3,(_f(32) & _f(3) => _f(33));
+  _f(1) & _f(2) & kiir.2,(_f(3) => _f(7));
+  _f(1) & _f(2) & kiir.1,(_f(3) => _f(31));
+  _f(1) & _f(2) & beir.23,(_f(29) & _f(3) => _f(30));
+  _f(1) & _f(2) & beir.22,(_f(14) & _f(3) => _f(28));
+  _f(1) & _f(2) & beir.21,(_f(14) & _f(3) => _f(27));
+  _f(1) & _f(2) & beir.20,(_f(14) & _f(3) => _f(26));
+  _f(1) & _f(2) & beir.19,(_f(14) & _f(3) => _f(25));
+  _f(1) & _f(2) & beir.18,(_f(14) & _f(3) => _f(24));
+  _f(1) & _f(2) & beir.17,(_f(14) & _f(3) => _f(23));
+  _f(1) & _f(2) & beir.16,(_f(14) & _f(3) => _f(22));
+  _f(1) & _f(2) & beir.15,(_f(14) & _f(3) => _f(21));
+  _f(1) & _f(2) & beir.14,(_f(14) & _f(3) => _f(20));
+  _f(1) & _f(2) & beir.13,(_f(14) & _f(3) => _f(19));
+  _f(1) & _f(2) & beir.12,(_f(14) & _f(3) => _f(18));
+  _f(1) & _f(2) & beir.11,(_f(14) & _f(3) => _f(17));
+  _f(1) & _f(2) & beir.10,(_f(14) & _f(3) => _f(16));
+  _f(1) & _f(2) & beir.9,(_f(14) & _f(3) => _f(15));
+  _f(1) & _f(2) & beir.8,(_f(11) & _f(3) => _f(13));
+  _f(1) & _f(2) & beir.7,(_f(11) & _f(3) => _f(12));
+  _f(1) & _f(2) & beir.6,(_f(8) & _f(3) => _f(10));
+  _f(1) & _f(2) & beir.5,(_f(8) & _f(3) => _f(9));
+  _f(1) & _f(2) & beir.4,(_f(3) => _f(7));
+  _f(1) & _f(2) & beir.3,(_f(3) => _f(6));
+  _f(1) & _f(2) & beir.2,(_f(3) => _f(5));
+  _f(1) & _f(2) & beir.1,(_f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+  ("`Component properties'" & Elemszam: INTEGER & Elemszam<=2147483647 & -2147483647<=Elemszam & Elemszam = 10 & "`Valuations'");
+  ("`Previous components invariants'" & tomb$1: 1..10 +-> 1..100 & dom(tomb$1) = 1..10 & darab$1: 0..10 & osszeg$1: 0..1000 & "`Component invariant'" & tomb = tomb$1 & darab = darab$1 & osszeg = osszeg$1);
+  "`Check preconditions of called operation, or While loop construction, or Assert predicates'";
+  ("Adjon meg ": STRING);
+  (Elemszam: -2147483647..2147483647);
+  (" db. számot.\n": STRING);
+  (1: 1..11);
+  ("`Local hypotheses'" & ii$0: 1..11 & tomb$2: 1..10 +-> 1..100 & dom(tomb$2) = 1..10);
+  (11-ii$0: INTEGER);
+  (0<=11-ii$0);
+  ("`Local hypotheses'" & ii$0: 1..11 & tomb$2: 1..10 +-> 1..100 & dom(tomb$2) = 1..10 & ii$0<=10);
+  (ii$0: -2147483647..2147483647);
+  (": ": STRING);
+  ("`Local hypotheses'" & ii$0: 1..11 & tomb$2: 1..10 +-> 1..100 & dom(tomb$2) = 1..10 & ii$0<=10 & bb$0: 1..100);
+  (ii$0: dom(tomb$2));
+  (bb$0: INTEGER);
+  (bb$0<=2147483647);
+  (-2147483647<=bb$0);
+  (ii$0+1: INTEGER);
+  (ii$0+1<=2147483647);
+  (-2147483647<=ii$0+1);
+  (ii$0: INTEGER);
+  (ii$0<=2147483647);
+  (-2147483647<=ii$0);
+  (11-(ii$0+1)+1<=11-ii$0);
+  (ii$0+1: 1..11);
+  (tomb$2<+{ii$0|->bb$0}: 1..10 +-> 1..100);
+  (dom(tomb$2<+{ii$0|->bb$0}) = 1..10);
+  ("`Local hypotheses'" & not(ii$7777<=10) & ii$7777: 1..11 & tombz$7777: 1..10 +-> 1..100 & dom(tombz$7777) = 1..10);
+  ("\n": STRING);
+  ("Megadott adatok: ": STRING);
+  ("`Local hypotheses'" & ii: 1..11);
+  (11-ii: INTEGER);
+  (0<=11-ii);
+  ("`Local hypotheses'" & ii: 1..11 & ii<=10);
+  (tomb$1(ii): INTEGER);
+  (tomb$1(ii)<=2147483647);
+  (-2147483647<=tomb$1(ii));
+  (ii: dom(tomb$1));
+  ("`Local hypotheses'" & ii: 1..11 & ii<=10 & not(1 = ii));
+  (", ": STRING);
+  (ii: -2147483647..2147483647);
+  ("`Local hypotheses'" & ii: 1..11 & ii<=10 & 1 = ii);
+  (ii+1: INTEGER);
+  (ii+1<=2147483647);
+  (-2147483647<=ii+1);
+  (ii: INTEGER);
+  (ii<=2147483647);
+  (-2147483647<=ii);
+  (11-(ii+1)+1<=11-ii);
+  (ii+1: 1..11);
+  ("`Local hypotheses'" & not(ii$7777<=10) & ii$7777: 1..11);
+  ("\n\n": STRING);
+  (darab$1: -2147483647..2147483647);
+  (" db prim szam van a tombben\n": STRING);
+  ("Ezek osszege: ": STRING);
+  (osszeg$1: -2147483647..2147483647);
+  ("`Concrete variables typing predicates'" & osszeg$1: INTEGER & darab$1: INTEGER & tomb$1: POW(INTEGER*INTEGER) & "`Variables conservation'" & tomb = tomb$1 & darab = darab$1 & osszeg = osszeg$1);
+  ("`Concrete variables typing predicates'" & osszeg: INTEGER & darab: INTEGER & tomb: POW(INTEGER*INTEGER))
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO, genDivergencePO == KO, genWDPO == KO, local_op == OK)
+END

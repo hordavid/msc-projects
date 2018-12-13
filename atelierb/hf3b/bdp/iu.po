@@ -1,0 +1,18 @@
+THEORY ProofList IS
+  Initialisation.2,(_f(1) => _f(3));
+  Initialisation.1,(_f(1) => _f(2))
+END
+&
+THEORY Formulas IS
+  "`Check that the invariant (tu: 1..5 --> INT) is established by the initialisation - ref 3.3'";
+  ((1..5)*{0}: 1..5 +-> INT);
+  (dom((1..5)*{0}) = 1..5);
+  ("`Component invariant'" & viu1: BOOL & tu: 1..5 +-> INT & dom(tu) = 1..5)
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-7792")(CLT == "V4.0-7795")(genOPO == KO, genDivergencePO == KO, local_op == OK)
+END

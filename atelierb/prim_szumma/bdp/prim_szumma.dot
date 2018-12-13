@@ -1,0 +1,13 @@
+digraph {
+core_i [ label=" core\ncore_i " shape= box ]
+main_i [ label=" main\nmain_i " shape= box ]
+utils2_i [ label=" utils2\nutils2_i " shape= box ]
+utils_i [ label=" utils\nutils_i " shape= box ]
+BASIC_IO [ label=" BASIC_IO " shape= boxshape= rhombcolor= pink ]
+
+"core_i" -> "BASIC_IO" [style= dotted ]
+"core_i" -> "utils2_i" []
+"main_i" -> "BASIC_IO" []
+"main_i" -> "core_i" []
+"utils2_i" -> "utils_i" []
+}

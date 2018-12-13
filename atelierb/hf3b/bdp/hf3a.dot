@@ -1,0 +1,9 @@
+digraph {
+ia [ label=" ia " shape= box ]
+ib [ label=" ib " shape= box ]
+iu [ label=" iu " shape= box ]
+ma_i [ label=" ma\nma_i " shape= box ]
+main_i [ label=" main\nmain_i " shape= box ]
+
+"main_i" -> "ma_i" []
+}

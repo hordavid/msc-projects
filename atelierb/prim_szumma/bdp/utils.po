@@ -1,0 +1,12 @@
+﻿THEORY ProofList
+END
+&
+THEORY Formulas 
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO, genDivergencePO == KO, genWDPO == KO, local_op == OK)
+END

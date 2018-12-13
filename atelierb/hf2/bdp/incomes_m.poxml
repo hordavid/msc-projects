@@ -1,0 +1,1992 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:1:1" typref="103245008" value="incomes"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:2:1:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:2:1:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:2:1:1" typref="2701647786" value="min_d"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:3:1:1" typref="2701647786" value="max_d"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:3:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:4:1:1" typref="2701647786" value="sum_i"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:4:2:1" typref="2701647786" value="0"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_income</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:1:1" typref="2701647786" value="day"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:1" typref="2701647786" value="income"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:2:2" typref="2701647786" value="100000"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:4:1:1:1" typref="2701647786" value="income"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:4:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:4:1:2:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>set_income</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:1:1" typref="2701647786" value="day"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:1" typref="2701647786" value="income"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Sub_Calculus>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:2" typref="2701647786" value="t_min"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:3" typref="2701647786" value="t_max"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:4" typref="2701647786" value="t_sum"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:1" typref="103245008" value="t_incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:2:1" typref="2701647786" value="t_min"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:3:1" typref="2701647786" value="t_max"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:1" typref="2701647786" value="t_sum"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:1:2:1" typref="103245008" value="t_incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:2:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:2:2" typref="2701647786" value="t_max"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:1:2:1" typref="103245008" value="t_incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:2:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:2:2" typref="2701647786" value="t_min"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:1" typref="2701647786" value="t_sum"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:2:1:2:1" typref="103245008" value="t_incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:3:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:1" typref="103245008" value="t_incomes"/>
+<Binary_Exp op="&lt;+" typref="103245008">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:2:1" typref="103245008" value="incomes"/>
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|-&gt;" typref="3672872563">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:2:2:1:1" typref="2701647786" value="day"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:2:2:1:2" typref="2701647786" value="income"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:1:1:1" typref="103245008" value="incomes"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:1:2:1" typref="103245008" value="t_incomes"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:2:1:1" typref="2701647786" value="sum_i"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:2:2:1" typref="2701647786" value="t_sum"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:3:1:1" typref="2701647786" value="min_d"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:3:2:1" typref="2701647786" value="t_min"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:4:1:1" typref="2701647786" value="max_d"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:4:2:1" typref="2701647786" value="t_max"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>sum_incomes</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:3:2:1:1:1" typref="2701647786" value="sum"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:3:2:1:2:1" typref="2701647786" value="sum_i"/>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>maximum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:4:2:1:1:1" typref="2701647786" value="max_income_day"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:4:2:1:2:1" typref="2701647786" value="max_d"/>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>minimum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:5:2:1:1:1" typref="2701647786" value="min_income_day"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:5:2:1:2:1" typref="2701647786" value="min_d"/>
+</Values>
+</Simple_Assignement_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Well_Definedness>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((incomes) : (((((1) .. (7))) --&gt; (((0) .. (1000000))))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:1" typref="103245008" value="incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((min_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:1" typref="2701647786" value="min_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((max_d) : (((1) .. (7))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:1" typref="2701647786" value="max_d"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sum_i) : (((0) .. ((1000000 * 7)))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:1" typref="2701647786" value="sum_i"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(max_d) &lt;= (incomes )(jj)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:5:2:1:2:2:2" typref="2701647786" value="max_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred initialTag="!(jj).(((((jj) : (dom(incomes)))) =&gt; (((incomes )(jj) &lt;= (incomes )(min_d)))))" type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:6:2:1:2:2:2" typref="2701647786" value="min_d"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=" initialTag="((sum_i) = (SIGMA(ii).(((ii) : (dom(incomes))) | (incomes )(ii))))">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:1" typref="2701647786" value="sum_i"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:2:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Well_Definedness>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:1:1" typref="103245008" value="incomes"/>
+</Variables>
+<Values>
+<Binary_Exp op="*" typref="103245008">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:2:1:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:2:1:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Nary_Exp op="{" typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:1:2:1:2:1" typref="2701647786" value="0"/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:2:1:1" typref="2701647786" value="min_d"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:3:1:1" typref="2701647786" value="max_d"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:3:2:1" typref="2701647786" value="1"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:4:1:1" typref="2701647786" value="sum_i"/>
+</Variables>
+<Values>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:3:1:4:2:1" typref="2701647786" value="0"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_income</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:1:1" typref="2701647786" value="day"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:1" typref="2701647786" value="income"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:2:2" typref="2701647786" value="100000"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_income</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:1:1" typref="2701647786" value="day"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:1" typref="2701647786" value="income"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:2:2:2" typref="2701647786" value="100000"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:3:1:3:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:4:1:1:1" typref="2701647786" value="income"/>
+</Variables>
+<Values>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:4:1:2:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:1:4:1:2:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+</Values>
+</Simple_Assignement_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_set_income</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:1:1" typref="2701647786" value="day"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:1" typref="2701647786" value="income"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_set_income</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:1:1" typref="2701647786" value="day"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:1:2:1" typref="103245008" value="incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:1" typref="2701647786" value="income"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:1:1" typref="103245008" value="incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:1:2" typref="2701647786" value="day"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:2:1:3:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Well_Definedness>
+<ANY_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:2" typref="2701647786" value="t_min"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:3" typref="2701647786" value="t_max"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:1:4" typref="2701647786" value="t_sum"/>
+</Variables>
+<Pred>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:1" typref="103245008" value="t_incomes"/>
+<Binary_Exp op="--&gt;" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:1:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:1:2:2:2" typref="2701647786" value="1000000"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:2:1" typref="2701647786" value="t_min"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:2:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:3:1" typref="2701647786" value="t_max"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:3:2:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:3:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:1" typref="2701647786" value="t_sum"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:2:1" typref="2701647786" value="0"/>
+<Binary_Exp op="*" typref="2701647786">
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:2:2:1" typref="2701647786" value="1000000"/>
+<Integer_Literal tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:4:2:2:2" typref="2701647786" value="7"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:1:2:1" typref="103245008" value="t_incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&gt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:2:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:5:2:1:2:2:2" typref="2701647786" value="t_max"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred type="!">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:1:1" typref="2701647786" value="jj"/>
+</Variables>
+<Body>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:1:1" typref="2701647786" value="jj"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:1:2:1" typref="103245008" value="t_incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;=">
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:1:2" typref="2701647786" value="jj"/>
+</Binary_Exp>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:2:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:6:2:1:2:2:2" typref="2701647786" value="t_min"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:1" typref="2701647786" value="t_sum"/>
+<Quantified_Exp typref="2701647786" type="SIGMA">
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:1:1" typref="2701647786" value="ii"/>
+</Variables>
+<Pred>
+<Exp_Comparison op=":">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:2:1:1" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:2:1:2:1" typref="103245008" value="t_incomes"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Pred>
+<Body>
+<Binary_Exp op="(" typref="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:3:1:1" typref="103245008" value="t_incomes"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:7:2:3:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Body>
+</Quantified_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:1" typref="103245008" value="t_incomes"/>
+<Binary_Exp op="&lt;+" typref="103245008">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:2:1" typref="103245008" value="incomes"/>
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|-&gt;" typref="3672872563">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:2:2:1:1" typref="2701647786" value="day"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:2:1:8:2:2:1:2" typref="2701647786" value="income"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Pred>
+<Then>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:1:1:1" typref="103245008" value="incomes"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:1:2:1" typref="103245008" value="t_incomes"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:2:1:1" typref="2701647786" value="sum_i"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:2:2:1" typref="2701647786" value="t_sum"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:3:1:1" typref="2701647786" value="min_d"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:3:2:1" typref="2701647786" value="t_min"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:4:1:1" typref="2701647786" value="max_d"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:2:3:1:3:1:4:2:1" typref="2701647786" value="t_max"/>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Then>
+</ANY_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_sum_incomes</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_sum_incomes</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:3:2:1:1:1" typref="2701647786" value="sum"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:3:2:1:2:1" typref="2701647786" value="sum_i"/>
+</Values>
+</Simple_Assignement_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_maximum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_maximum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:4:2:1:1:1" typref="2701647786" value="max_income_day"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:4:2:1:2:1" typref="2701647786" value="max_d"/>
+</Values>
+</Simple_Assignement_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_minimum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Well_Definedness/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_minimum</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Well_Definedness>
+<Simple_Assignement_Sub>
+<Variables>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:5:2:1:1:1" typref="2701647786" value="min_income_day"/>
+</Variables>
+<Values>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:4:5:2:1:2:1" typref="2701647786" value="min_d"/>
+</Values>
+</Simple_Assignement_Sub>
+</Well_Definedness>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="103245008">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:1:1:1:1" value="INTEGER"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:2:1" value="INTEGER"/>
+</Type>
+<Type id="3083833907">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:3:1:1:1:1" value="INTEGER"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:3:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:4:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="3672872563">
+<Binary_Exp op="*">
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:5:1:1" value="INTEGER"/>
+<Id tag="C:\Users\Developer\projects\elte\atelierb\hf2\bdp\incomes_m.bxml:1:5:5:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

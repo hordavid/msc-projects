@@ -1,0 +1,64 @@
+THEORY User_Pass IS
+Operation(beir) & Pattern(a : b) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a :  -b..b) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a : a..b) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a-b : c) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a<=b-c) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a : dom(b)) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a<=b) 
+	& ff(0) & pr;
+Operation(beir) & Pattern( -a<=b) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a+b : c) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a+b<=c) 
+	& ff(0) & pr;
+Operation(beir) & Pattern( -a<=b+c) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a-(b+c)+c<=a-b) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a+b : b..c) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(a<+{b|->c} : d..e +-> d..f) 
+	& ff(0) & pr;
+Operation(beir) & Pattern(dom(a<+{b|->c}) = d..e) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a : b) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a : a..b) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a-b : c) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a<=b-c) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a(b) : c) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a(b)<=c) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern( -a<=b(c)) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a : dom(b)) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a :  -b..b) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a+b : c) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a+b<=c) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern( -a<=b+c) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a<=b) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern( -a<=b) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a-(b+c)+c<=a-b) 
+	& ff(0) & pr;
+Operation(kiir) & Pattern(a+b : b..c) 
+	& ff(0) & pr
+END 

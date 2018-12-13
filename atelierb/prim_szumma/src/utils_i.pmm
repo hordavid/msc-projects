@@ -1,0 +1,46 @@
+THEORY User_Pass IS
+Operation(refinement_of_l_is_prim) & Pattern(2 : 2..p_num) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(not(p_num mod kk = 0)) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(p_num-v_ii : INTEGER) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(0<=p_num-v_ii) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(p_num mod v_ii : INTEGER) 
+	& ff(0) & dd & ar(b1.61,Once);
+Operation(refinement_of_l_is_prim) & Pattern(0<=p_num mod v_ii) 
+	& ff(0) & dd & ar(b1.59,Once);
+Operation(refinement_of_l_is_prim) & Pattern(v_ii : INTEGER) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(0<=v_ii) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(v_ii<=2147483647) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(not(v_ii = 0)) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(v_ii+1 : INTEGER) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(v_ii+1<=2147483647) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern( -2147483647<=v_ii+1) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern( -2147483647<=v_ii) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(p_num-(v_ii+1)+1<=p_num-v_ii) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(v_ii+1 : 2..p_num) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(v_ii+1-1 : 2..p_num-1) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(p_num mod (v_ii+1-1) = 0) 
+	& ff(0) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(p_num mod v_ii<=2147483647) 
+	& ff(0) & dd & ah(v_ii<=2147483647) & pr & dd & ar(b1.46,Once);
+Operation(refinement_of_l_is_prim) & Pattern( -2147483647<=p_num mod v_ii) 
+	& ff(0) & dd & ah(0<=p_num mod v_ii) & ar(b1.59,Once) & pr;
+Operation(refinement_of_l_is_prim) & Pattern(not(p_num mod kk = 0)) 
+	& ff(0) & ah(v_ii+1-1 = v_ii) & pr & dd & dd & dc(kk<=v_ii-1) & dd & ph(kk,!kk.(kk : 2..v_ii-1 => not(p_num mod kk = 0))) & ah(kk : 2..v_ii & kk<=v_ii-1) & eh(v_ii,v_ii+1-1,Goal) & pr & pr & pp(rp.0) & dd & ah(kk = v_ii) & pr & ah(not(kk<=v_ii-1) & kk : 2..v_ii) & pr & eh(v_ii,v_ii+1-1,Goal) & pr & pp(rp.0);
+Operation(refinement_of_l_is_prim) & Pattern(v_prim$7777 = bool(2<=p_num & !zz.(zz : 2..p_num-1 => not(p_num mod zz = 0)))) 
+	& ff(0) & dd & dc(v_prim$7777,BOOL) & dd & ah(2<=p_num & !zz.(zz : 2..p_num-1 => not(p_num mod zz = 0))) & pr & ah(p_num-1 = v_ii$7777-1) & ah(p_num = v_ii$7777) & ah(v_ii$7777<=p_num & p_num<v_ii$7777+1) & ah(v_ii$7777 : 2..p_num) & pp(rp.0) & pr & ah(not(v_prim$7777 = TRUE & v_ii$7777+1<=p_num) & v_prim$7777 = TRUE & v_ii$7777<=p_num) & pr & pr & pr & ah(v_ii$7777 : 2..p_num) & pp(rp.0) & pr & pr & pr & pr & dd & pr & se(v_ii$7777-1) & pr
+END 

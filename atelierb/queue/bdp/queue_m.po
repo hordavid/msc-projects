@@ -1,0 +1,74 @@
+THEORY ProofList IS
+_f(1) & _f(16) & _f(36) & get_min.8,(_f(43) & _f(21) & _f(38) & _f(22) & _f(39) & _f(40) & _f(23) & _f(41) & _f(42) & _f(28) & _f(29) & _f(30) & _f(31) & _f(18) & _f(19) & _f(20) & _f(5) & _f(6) => _f(34));
+_f(1) & _f(16) & _f(36) & get_min.7,(_f(43) & _f(21) & _f(38) & _f(22) & _f(39) & _f(40) & _f(23) & _f(41) & _f(42) & _f(28) & _f(29) & _f(30) & _f(31) & _f(6) & _f(13) => _f(33));
+_f(1) & _f(16) & _f(36) & get_min.6,(_f(43) & _f(21) & _f(38) & _f(22) & _f(39) & _f(40) & _f(23) & _f(41) & _f(42) & _f(28) & _f(29) & _f(30) & _f(31) & _f(6) & _f(11) => _f(32));
+_f(1) & _f(16) & _f(36) & get_min.5,(_f(37) & _f(2) & _f(3) & _f(4) & _f(5) & _f(6) => _f(15));
+_f(1) & _f(16) & _f(36) & get_min.4,(_f(37) & _f(6) & _f(13) => _f(14));
+_f(1) & _f(16) & _f(36) & get_min.3,(_f(37) & _f(6) & _f(11) => _f(12));
+_f(1) & _f(16) & _f(36) & get_min.2,(_f(37) & _f(6) & _f(9) => _f(10));
+_f(1) & _f(16) & _f(36) & get_min.1,(_f(37) & _f(6) & _f(7) => _f(8));
+_f(1) & _f(16) & _f(35) & empty.5,(_f(2) & _f(3) & _f(4) & _f(5) & _f(6) => _f(15));
+_f(1) & _f(16) & _f(35) & empty.4,(_f(6) & _f(13) => _f(14));
+_f(1) & _f(16) & _f(35) & empty.3,(_f(6) & _f(11) => _f(12));
+_f(1) & _f(16) & _f(35) & empty.2,(_f(6) & _f(9) => _f(10));
+_f(1) & _f(16) & _f(35) & empty.1,(_f(6) & _f(7) => _f(8));
+_f(1) & _f(16) & _f(17) & add.3,(_f(21) & _f(22) & _f(23) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(18) & _f(19) & _f(20) & _f(5) & _f(6) => _f(34));
+_f(1) & _f(16) & _f(17) & add.2,(_f(21) & _f(22) & _f(23) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(6) & _f(13) => _f(33));
+_f(1) & _f(16) & _f(17) & add.1,(_f(21) & _f(22) & _f(23) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(6) & _f(11) => _f(32));
+_f(1) & Initialisation.5,(_f(2) & _f(3) & _f(4) & _f(5) & _f(6) => _f(15));
+_f(1) & Initialisation.4,(_f(6) & _f(13) => _f(14));
+_f(1) & Initialisation.3,(_f(6) & _f(11) => _f(12));
+_f(1) & Initialisation.2,(_f(6) & _f(9) => _f(10));
+_f(1) & Initialisation.1,(_f(6) & _f(7) => _f(8))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+(1 +1 <= card({}));
+((ii) : (dom({})));
+((jj) : (dom({})));
+(jj +1 <= ii);
+"Invariant is preserved";
+"Check invariant ((xx) : (((((0) .. (100))) +-> (((0) .. (100))))))";
+(({}) : (((((0) .. (100))) +-> (((0) .. (100))))));
+"Check invariant ((xx) : (FIN(xx)))";
+(({}) : (FIN({})));
+"Check invariant (((is_empty) = (TRUE))  => ((card(xx)) = (0))) & (((card(xx)) = (0)) => ((is_empty) = (TRUE)))";
+(((TRUE) = (TRUE))  => ((card({})) = (0))) & (((card({})) = (0)) => ((TRUE) = (TRUE)));
+"Check invariant (((is_empty) = (FALSE))  => (0 +1 <= card(xx))) & ((0 +1 <= card(xx)) => ((is_empty) = (FALSE)))";
+(((TRUE) = (FALSE))  => (0 +1 <= card({}))) & ((0 +1 <= card({})) => ((TRUE) = (FALSE)));
+(({} )(jj) +1 <= ({} )(ii));
+((xx) : (((((0) .. (100))) +-> (((0) .. (100)))))) & ((is_empty) : (BOOL)) & ((xx) : (FIN(xx))) & (((is_empty) = (TRUE))  => ((card(xx)) = (0))) & (((card(xx)) = (0)) => ((is_empty) = (TRUE))) & (((is_empty) = (FALSE))  => (0 +1 <= card(xx))) & ((0 +1 <= card(xx)) => ((is_empty) = (FALSE))) & !(ii,jj).((((1 +1 <= card(xx)) & ((ii) : (dom(xx))) & ((jj) : (dom(xx))) & (jj +1 <= ii)) => (((xx )(jj) +1 <= (xx )(ii)))));
+((item) : (((0) .. (100)))) & ((dom(xx)) = (((0) .. (card(xx)))));
+(1 +1 <= card(t_xx));
+((ii) : (dom(t_xx)));
+((jj) : (dom(t_xx)));
+((t_xx) : (((((0) .. (100))) +-> (((0) .. (100))))));
+((t_is_empty) : (BOOL));
+((t_xx) : (FIN(t_xx)));
+((ran(t_xx)) = (((ran(xx)) \/ ({item}))));
+((card(t_xx)) : (((1) .. ((card(xx) + 1)))));
+((0 +1 <= card(t_xx))  => !(ii,jj).(((((ii) : (dom(t_xx))) & ((jj) : (dom(t_xx))) & (jj +1 <= ii)) => (((t_xx )(jj) +1 <= (t_xx )(ii))))));
+(!(ii,jj).(((((ii) : (dom(t_xx))) & ((jj) : (dom(t_xx))) & (jj +1 <= ii)) => (((t_xx )(jj) +1 <= (t_xx )(ii))))) => (0 +1 <= card(t_xx)));
+(((t_is_empty) = (TRUE))  => ((card(t_xx)) = (0)));
+(((card(t_xx)) = (0)) => ((t_is_empty) = (TRUE)));
+(((t_is_empty) = (FALSE))  => (0 +1 <= card(t_xx)));
+((0 +1 <= card(t_xx)) => ((t_is_empty) = (FALSE)));
+(((t_is_empty) = (TRUE))  => ((card(t_xx)) = (0))) & (((card(t_xx)) = (0)) => ((t_is_empty) = (TRUE)));
+(((t_is_empty) = (FALSE))  => (0 +1 <= card(t_xx))) & ((0 +1 <= card(t_xx)) => ((t_is_empty) = (FALSE)));
+((t_xx )(jj) +1 <= (t_xx )(ii));
+((card(xx)) : (((1) .. (100))));
+(0 +1 <= card(xx)) & ((dom(xx)) = (((0) .. (card(xx)))));
+((card(xx)) = (1));
+((t_min) : (((0) .. (100))));
+((dom(t_xx)) = (((0) .. (100))));
+((dom(xx)) = (((0) .. (100))));
+((t_min) = ((xx )(card(xx))));
+!(jj,kk).(((((jj) : (dom(t_xx))) & ((kk) : (dom(t_xx))) & (kk +1 <= jj)) => (((t_xx )(kk) +1 <= (t_xx )(jj)))));
+not(((card(xx)) = (1)));
+((is_empty) = (TRUE));
+not(((is_empty) = (TRUE)))
+END
+&
+THEORY EnumerateX
+END

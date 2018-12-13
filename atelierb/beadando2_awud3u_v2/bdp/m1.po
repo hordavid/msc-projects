@@ -1,0 +1,73 @@
+THEORY ProofList IS
+_f(1) & _f(20) & _f(21) & store.5,(_f(29) & _f(30) & _f(31) & _f(32) & _f(33) & _f(34) & _f(35) & _f(36) & _f(37) & _f(38) & _f(39) & _f(40) & _f(28) & _f(8) => _f(45));
+_f(1) & _f(20) & _f(21) & store.4,(_f(29) & _f(30) & _f(31) & _f(32) & _f(33) & _f(34) & _f(35) & _f(36) & _f(37) & _f(38) & _f(39) & _f(40) & _f(24) & _f(27) & _f(26) & _f(8) => _f(44));
+_f(1) & _f(20) & _f(21) & store.3,(_f(29) & _f(30) & _f(31) & _f(32) & _f(33) & _f(34) & _f(35) & _f(36) & _f(37) & _f(38) & _f(39) & _f(40) & _f(24) & _f(25) & _f(26) & _f(8) => _f(43));
+_f(1) & _f(20) & _f(21) & store.2,(_f(29) & _f(30) & _f(31) & _f(32) & _f(33) & _f(34) & _f(35) & _f(36) & _f(37) & _f(38) & _f(39) & _f(40) & _f(23) & _f(8) => _f(42));
+_f(1) & _f(20) & _f(21) & store.1,(_f(29) & _f(30) & _f(31) & _f(32) & _f(33) & _f(34) & _f(35) & _f(36) & _f(37) & _f(38) & _f(39) & _f(40) & _f(22) & _f(8) => _f(41));
+_f(1) & Initialisation.8,(_f(7) & _f(8) => _f(19));
+_f(1) & Initialisation.7,(_f(4) & _f(5) & _f(6) & _f(8) => _f(18));
+_f(1) & Initialisation.6,(_f(4) & _f(5) & _f(6) & _f(8) => _f(17));
+_f(1) & Initialisation.5,(_f(8) & _f(15) => _f(16));
+_f(1) & Initialisation.4,(_f(8) & _f(13) => _f(14));
+_f(1) & Initialisation.3,(_f(3) & _f(8) => _f(12));
+_f(1) & Initialisation.2,(_f(2) & _f(8) => _f(11));
+_f(1) & Initialisation.1,(_f(8) & _f(9) => _f(10))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((FALSE) = (TRUE));
+((FALSE) = (FALSE));
+((jj) : (((1) .. (card({})))));
+not(jj = 1);
+(2 <= card({}));
+not({} = {});
+"Invariant is preserved";
+"Check invariant ((measures) : (((((1) .. (100))) +-> (INT))))";
+(({}) : (((((1) .. (100))) +-> (INT))));
+((card({})) = (100));
+(card({}) +1 <= 100);
+"Check invariant ((mini) : (((1) .. (100))))";
+((1) : (((1) .. (100))));
+"Check invariant ((mavg) : (INT))";
+((0) : (INT));
+(({} )(1) <= ({} )(jj));
+(({} )(jj) <= ({} )(1));
+((0) = ((SIGMA(ii).(((ii) : (((1) .. (card({}))))) | ({} )(ii)) / card({}))));
+((measures) : (((((1) .. (100))) +-> (INT)))) & ((isFull) : (BOOL)) & ((((isFull) = (TRUE))) => (((card(measures)) = (100)))) & ((((isFull) = (FALSE))) => ((card(measures) +1 <= 100))) & ((mini) : (((1) .. (100)))) & ((maxi) : (((1) .. (100)))) & ((mavg) : (INT)) & !(jj).(((((jj) : (((1) .. (card(measures))))) & not(jj = mini) & (2 <= card(measures))) => (((measures )(mini) <= (measures )(jj))))) & !(jj).(((((jj) : (((1) .. (card(measures))))) & not(jj = maxi) & (2 <= card(measures))) => (((measures )(jj) <= (measures )(maxi))))) & ((not(measures = {})) => (((mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) | (measures )(ii)) / card(measures))))));
+((item) : (INT));
+((t_isFull) = (TRUE));
+((t_isFull) = (FALSE));
+((jj) : (((1) .. (card(t_measures)))));
+not(jj = t_mini);
+(2 <= card(t_measures));
+not(jj = t_maxi);
+not(t_measures = {});
+((t_measures) : (((((1) .. (100))) +-> (INT))));
+((t_mini) : (((1) .. (100))));
+((t_maxi) : (((1) .. (100))));
+((t_mavg) : (INT));
+((t_isFull) : (BOOL));
+((((t_isFull) = (TRUE))) => (((card(t_measures)) = (100))));
+((((t_isFull) = (FALSE))) => ((card(t_measures) +1 <= 100)));
+!(jj).(((((jj) : (((2) .. (card(measures))))) & ((t_isFull) = (TRUE))) => (((t_measures) = (((measures) <+ ({(((jj - 1)) |-> ((measures )(jj)))})))))));
+((t_measures) = (((measures) <+ ({((card(measures)) |-> (item))}))));
+!(jj).(((((jj) : (((1) .. (card(t_measures))))) & not(jj = t_mini) & (2 <= card(t_measures))) => (((t_measures )(t_mini) <= (t_measures )(jj)))));
+!(jj).(((((jj) : (((1) .. (card(t_measures))))) & not(jj = t_maxi) & (2 <= card(t_measures))) => (((t_measures )(jj) <= (t_measures )(t_maxi)))));
+((not(t_measures = {})) => (((t_mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(t_measures))))) | (t_measures )(ii)) / card(t_measures))))));
+((card(t_measures)) = (100));
+(card(t_measures) +1 <= 100);
+((t_measures )(t_mini) <= (t_measures )(jj));
+((t_measures )(jj) <= (t_measures )(t_maxi));
+((t_mavg) = ((SIGMA(ii).(((ii) : (((1) .. (card(t_measures))))) | (t_measures )(ii)) / card(t_measures))));
+((measures) : (((((1) .. (100))) +-> (INT))));
+((sum) : (INT));
+((sum) = (SIGMA(ii).(((ii) : (((1) .. (card(measures))))) & not(measures = {}) | (measures )(ii))));
+((SIGMA(ii).(((ii) : (((1) .. (card(measures))))) & not(measures = {}) | (measures )(ii))) : (INT));
+((ii$1) : (((1) .. (100))));
+!(jj).(((((jj) : (((1) .. (card(measures))))) & not(jj = ii$1) & (2 <= card(measures))) => (((measures )(ii$1) <= (measures )(jj)))));
+!(jj).(((((jj) : (((1) .. (card(measures))))) & not(jj = ii$1) & (2 <= card(measures))) => (((measures )(jj) <= (measures )(ii$1)))))
+END
+&
+THEORY EnumerateX
+END

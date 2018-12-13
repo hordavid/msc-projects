@@ -1,0 +1,26 @@
+V "GNAT Lib v5"
+P ZX
+
+RN
+RV SPARK_05
+
+U sets%b		sets.adb		97408953 NE OO PK IL
+
+U sets%s		sets.ads		0b7f4888 BN EE NE OO PK IL
+
+D sets.ads		20180417154332 0b7f4888 sets%s
+D sets.adb		20180417154332 9c3fc1db sets%b
+D system.ads		20141031112219 1d274481 system%s
+X 1 sets.ads
+6K9*sets 19l5 19e9 2|6b14 19l5 19t9
+8V18*succ{integer} 8>23 18r23 2|7b18 10l13 10t17
+8i23 x{integer} 2|7b23 9r24
+9V18*pred{integer} 9>23 18r29 2|11b18 14l13 14t17
+9i23 x{integer} 2|11b23 13r24
+10V18*bool{boolean} 10>23 18r35 2|15b18 18l13 18t17
+10b23 x{boolean} 2|15b23 17r24
+12i9*MAXINT{integer}
+13i9*MININT{integer}
+15A14*array_type_1(boolean)<integer>
+16A14*array_type_2(integer)<integer>
+

@@ -1,0 +1,24 @@
+﻿THEORY ProofList IS
+  Initialisation.4,(_f(6) => _f(7));
+  Initialisation.3,(_f(4) => _f(5));
+  Initialisation.2,(_f(1) => _f(3));
+  Initialisation.1,(_f(1) => _f(2))
+END
+&
+THEORY Formulas IS
+  "`Check that the invariant (tomb: 1..10 --> 1..100) is established by the initialisation - ref 3.3'";
+  ((1..10)*{1}: 1..10 +-> 1..100);
+  (dom((1..10)*{1}) = 1..10);
+  "`Check that the invariant (darab: 0..10) is established by the initialisation - ref 3.3'";
+  (0: 0..10);
+  "`Check that the invariant (osszeg: 0..1000) is established by the initialisation - ref 3.3'";
+  (0: 0..1000);
+  ("`Component invariant'" & tomb: 1..10 +-> 1..100 & dom(tomb) = 1..10 & darab: 0..10 & osszeg: 0..1000)
+END
+&
+THEORY EnumerateX 
+END
+&
+THEORY Version IS
+  POVersion("V4.0-55020")(CLT == "V4.0-53996")(genOPO == KO, genDivergencePO == KO, genWDPO == KO, local_op == OK)
+END

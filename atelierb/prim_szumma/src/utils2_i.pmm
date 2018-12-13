@@ -1,0 +1,138 @@
+THEORY User_Pass IS
+Operation(prim_osszeg) & Pattern(1 : 1..11) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(1 : 1..100) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(11-ii : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(0<=11-ii) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(tomb(ii) : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(tomb(ii)<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern( -2147483647<=tomb(ii)) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ii : dom(tomb)) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(0<=tomb(ii)) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ossz+tomb(ii) : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ossz+tomb(ii)<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern( -2147483647<=ossz+tomb(ii)) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ossz : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ossz<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern( -2147483647<=ossz) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ii+1 : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ii+1<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern( -2147483647<=ii+1) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ii : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ii<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern( -2147483647<=ii) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(11-(ii+1)+1<=11-ii) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ii+1 : 1..11) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(tomb(ii) : 1..100) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(0<=ossz+tomb(ii)) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ossz+tomb(ii)<=(ii+1-1)*100) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(ossz<=(ii+1-1)*100) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))) : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern( -2147483647<=SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(1 : 1..11) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(0 : 0..10) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(11-ii : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(0<=11-ii) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(tomb(ii) : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(tomb(ii)<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern( -2147483647<=tomb(ii)) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(ii : dom(tomb)) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(0<=tomb(ii)) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(darab+1 : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(darab+1<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern( -2147483647<=darab+1) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(darab : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(darab<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern( -2147483647<=darab) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(ii+1 : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(ii+1<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern( -2147483647<=ii+1) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern( -2147483647<=ii) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(11-(ii+1)+1<=11-ii) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(0<=ii+1) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(ii+1 : 1..11) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(darab+1 : 0..10) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(darab<=ii) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))) : INTEGER) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))<=2147483647) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern( -2147483647<=SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))) = SIGMA(ii).(ii : 1..10 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0)))))) 
+	& ff(0) & pr;
+Operation(prim_darab) & Pattern(SIGMA(ii).(ii : 1..10 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0))))) : 0..10) 
+	& ff(0) & pr;
+Operation(prim_osszeg) & Pattern(0 = SIGMA(jj).(jj : 1..0 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & dd & pr & ar(s1.6,Goal) & pr;
+Operation(prim_darab) & Pattern(0 = SIGMA(jj).(jj : 1..0 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & dd & pr & ar(s1.6,Goal) & pr;
+Operation(prim_osszeg) & Pattern(ossz+tomb(ii) = SIGMA(jj).(jj : 1..ii+1-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & dd & ah(ii+1-1 = ii) & pr & dd & ah(1<=ii) & ah(ii : 1..11) & pp(rp.0) & dd & ah(1..ii-1\/{ii} = 1..ii) & ar(SimplifySetUniXY.7,Goal) & pr & dd & ah(1..ii-1/\{ii} = {}) & pr & dd & eh(ii+1-1,_h,Goal) & ah(tomb(ii) = SIGMA(jj).(jj : {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & pr & eh(bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0))),_h,Goal) & eh(v_ret,_h,Goal) & pr & dd & eh(1..ii,_h,Goal) & eh(tomb(ii),_h,Goal) & eh(ossz,_h,Goal) & ar(s1.3,Goal) & pr;
+Operation(prim_osszeg) & Pattern(SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))) : 0..1000) 
+	& ff(0) & dd & ah(1<=ii$7777) & pr & dd & ah(ii$7777<=11) & pr & ah(ii$7777 : 1..11) & pp(rp.0) & dd & ah(10<ii$7777) & pr & ah(not(ii$7777<=10)) & pp(rp.0) & dd & ah(ii$7777 = 11) & ah(ii$7777<=11 & 11<=ii$7777) & pr & pr & pp(rp.0) & eh(ii$7777,_h,AllHyp) & pr;
+Operation(prim_osszeg) & Pattern(SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))) = SIGMA(ii).(ii : 1..10 | ({TRUE|->tomb(ii)}\/{FALSE|->0})(bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0)))))) 
+	& ff(0) & dd & ah(1<=ii$7777) & pr & dd & ah(ii$7777<=11) & pr & ah(ii$7777 : 1..11) & pp(rp.0) & dd & ah(10<ii$7777) & pr & ah(not(ii$7777<=10)) & pp(rp.0) & dd & ah(ii$7777 = 11) & ah(ii$7777<=11 & 11<=ii$7777) & pr & pr & pp(rp.0) & pr;
+Operation(prim_osszeg) & Pattern(SIGMA(ii).(ii : 1..10 | ({TRUE|->tomb(ii)}\/{FALSE|->0})(bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0))))) : 0..1000) 
+	& ff(0) & dd & ah(1<=ii$7777) & pr & dd & ah(ii$7777<=11) & pr & ah(ii$7777 : 1..11) & pp(rp.0) & dd & ah(10<ii$7777) & pr & ah(not(ii$7777<=10)) & pp(rp.0) & dd & ah(ii$7777 = 11) & ah(ii$7777<=11 & 11<=ii$7777) & pr & pr & pp(rp.0) & dd & eh(ii$7777,_h,AllHyp) & pr;
+Operation(prim_osszeg) & Pattern(SIGMA(jj).(jj : 1..ii$7777-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))<=2147483647) 
+	& ff(0) & dd & ah(1<=ii$7777) & pr & dd & ah(ii$7777<=11) & pr & ah(ii$7777 : 1..11) & pp(rp.0) & dd & ah(10<ii$7777) & pr & ah(not(ii$7777<=10)) & pp(rp.0) & dd & ah(ii$7777 = 11) & ah(ii$7777<=11 & 11<=ii$7777) & pr & pr & pp(rp.0) & ah(SIGMA(jj).(jj : 1..ii$7777-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))<=(ii$7777-1)*100) & eh(ii$7777,_h,Goal) & dd & ah((11-1)*100<=2147483647) & pr & dd & ah(SIGMA(jj).(jj : 1..10 | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))<=1000) & pr;
+Operation(prim_darab) & Pattern(darab+1 = SIGMA(jj).(jj : 1..ii+1-1 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & dd & ah(ii+1-1 = ii) & pr & dd & eh(ii+1-1,_h,Goal) & ah(1 = SIGMA(jj).(jj : {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & pr & ah(TRUE = bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0)))) & eh(TRUE,_h,Goal) & pr & eh(bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0))),_h,Goal) & pr & dd & ah(1..ii-1\/{ii} = 1..ii) & ah(1<=ii) & ah(ii : 1..11) & pp(rp.0) & dd & ar(SimplifySetUniXY.7,Goal) & pr & dd & eh(1..ii,_h,Goal) & ah(darab+1 = darab+SIGMA(jj).(jj : {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & eh(SIGMA(jj).(jj : {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),_h,Goal) & pr & dd & eh(darab+1,_h,Goal) & eh(darab,_h,Goal) & ah(1..ii-1/\{ii} = {}) & pr & dd & ar(s1.3,Goal) & pr;
+Operation(prim_osszeg) & Pattern(ossz = SIGMA(jj).(jj : 1..ii+1-1 | ({TRUE|->tomb(jj)}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & dd & ah(ii+1-1 = ii) & pr & dd & ah(1<=ii) & ah(ii : 1..11) & pp(rp.0) & dd & ah(1..ii-1\/{ii} = 1..ii) & ar(SimplifySetUniXY.7,Goal) & pr & dd & ah(1..ii-1/\{ii} = {}) & pr & dd & ah(0 = SIGMA(jj).(jj : {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & pr & eh(bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0))),_h,Goal) & ah(v_ret = FALSE) & pr & pr & dd & ah(ossz = ossz+0) & pr & dd & eh(ossz,_h,Goal) & eh(ii+1-1,_h,Goal) & eh(1..ii,_h,Goal) & ah(ossz+0 = SIGMA(jj).(jj : 1..ii-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))+SIGMA(jj).(jj : {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & eh(SIGMA(jj).(jj : 1..ii-1 | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),_h,Goal) & eh(SIGMA(jj).(jj : {ii} | {TRUE|->tomb(jj),FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),_h,Goal) & pr & eh(ossz+0,_h,Goal) & ar(s1.3,Goal) & pr;
+Operation(prim_darab) & Pattern(darab = SIGMA(jj).(jj : 1..ii+1-1 | ({TRUE|->1}\/{FALSE|->0})(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) 
+	& ff(0) & dd & ah(1..ii-1\/{ii} = 1..ii) & pr & ah(1<=ii) & ah(ii : 1..11) & pp(rp.0) & dd & ar(SimplifySetUniXY.7,Goal) & pr & dd & ah(0 = SIGMA(jj).(jj : {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & pr & ah(FALSE = bool(2<=tomb(ii) & !zz.(zz : 2..tomb(ii)-1 => not(tomb(ii) mod zz = 0)))) & ah(v_ret = FALSE) & pr & dd & eh(FALSE,_h,Goal) & pr & pr & dd & ah(darab = darab+0) & pr & dd & ah(darab+0 = darab+SIGMA(jj).(jj : {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0)))))) & eh(SIGMA(jj).(jj : {ii} | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),_h,Goal) & pr & dd & eh(darab,_h,Goal) & eh(darab+0,_h,Goal) & eh(darab,SIGMA(jj).(jj : 1..ii-1 | {TRUE|->1,FALSE|->0}(bool(2<=tomb(jj) & !zz.(zz : 2..tomb(jj)-1 => not(tomb(jj) mod zz = 0))))),Goal) & ah(ii+1-1 = ii) & pr & dd & eh(ii+1-1,_h,Goal) & eh(1..ii,_h,Goal) & ah(1..ii-1/\{ii} = {}) & pr & dd & ar(s1.3,Goal) & pr
+END 

@@ -1,0 +1,5 @@
+file:3d6e29cc56e049020f836c08688d2623
+dep :94bf29496301bc77b6729b3d960fb1af:common.def
+abst:core
+sees:BASIC_IO
+impo:utils2

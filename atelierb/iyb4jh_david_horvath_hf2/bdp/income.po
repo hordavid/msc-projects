@@ -1,0 +1,49 @@
+THEORY ProofList IS
+_f(1) & _f(4) & _f(10) & WellDefinedness_get_min.2,(_f(12) => _f(21));
+_f(1) & _f(4) & _f(10) & WellDefinedness_get_min.1,(_f(12) => _f(18));
+_f(1) & _f(4) & WellDefinedness_Precondition_get_min.3,(_f(20) & _f(11) & _f(12) => _f(14));
+_f(1) & _f(4) & WellDefinedness_Precondition_get_min.2,(_f(20) & _f(11) & _f(12) => _f(13));
+_f(1) & _f(4) & WellDefinedness_Precondition_get_min.1,(_f(20) & _f(12) => _f(16));
+_f(1) & _f(4) & _f(9) & WellDefinedness_get_max.2,(_f(12) => _f(19));
+_f(1) & _f(4) & _f(9) & WellDefinedness_get_max.1,(_f(12) => _f(18));
+_f(1) & _f(4) & WellDefinedness_Precondition_get_max.3,(_f(17) & _f(11) & _f(12) => _f(14));
+_f(1) & _f(4) & WellDefinedness_Precondition_get_max.2,(_f(17) & _f(11) & _f(12) => _f(13));
+_f(1) & _f(4) & WellDefinedness_Precondition_get_max.1,(_f(17) & _f(12) => _f(16));
+_f(1) & _f(4) & _f(8) & WellDefinedness_sum_incomes.3,(_f(11) & _f(12) => _f(14));
+_f(1) & _f(4) & _f(8) & WellDefinedness_sum_incomes.2,(_f(11) & _f(12) => _f(13));
+_f(1) & _f(4) & _f(8) & WellDefinedness_sum_incomes.1,(_f(12) => _f(16));
+_f(1) & _f(4) & WellDefinedness_Precondition_sum_incomes.3,(_f(15) & _f(11) & _f(12) => _f(14));
+_f(1) & _f(4) & WellDefinedness_Precondition_sum_incomes.2,(_f(15) & _f(11) & _f(12) => _f(13));
+_f(1) & _f(4) & WellDefinedness_Precondition_sum_incomes.1,(_f(15) & _f(12) => _f(16));
+_f(1) & _f(4) & _f(5) & WellDefinedness_get_income.2,(_f(12) => _f(14));
+_f(1) & _f(4) & _f(5) & WellDefinedness_get_income.1,(_f(12) => _f(13));
+_f(1) & _f(4) & _f(6) & set_income.1,(_f(2) => _f(7));
+_f(1) & Initialisation.1,(_f(2) => _f(3))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+"Invariant is preserved";
+(((((1) .. (7)) * {0})) : (((((1) .. (7))) --> (NAT))));
+incomes : ((1) .. (7)) +-> NAT & dom(incomes) = ((1) .. (7)) & ((incomes) : (((((1) .. (7))) --> (NAT))));
+((day) : (((1) .. (7)))) & ((income) : (NAT));
+((day) : (((1) .. (7)))) & ((value) : (NAT));
+((((incomes) <+ ({((day) |-> (value))}))) : (((((1) .. (7))) --> (NAT))));
+((sum) : (NAT)) & ((SIGMA(day).(((day) : (((1) .. (7)))) | (incomes )(day))) : (NAT));
+((max_income) : (NAT)) & ((SIGMA(day).(((day) : (((1) .. (7)))) | (incomes )(day))) : (NAT));
+((min_income) : (NAT)) & ((SIGMA(day).(((day) : (((1) .. (7)))) | (incomes )(day))) : (NAT));
+((day) : (((1) .. (7))));
+"Well definedness";
+((day) : (dom(incomes)));
+((incomes) : (((dom(incomes)) +-> (ran(incomes)))));
+((sum) : (NAT));
+((SET(day).(((day) : (((1) .. (7)))))) : (FIN(SET(day).(((day) : (((1) .. (7))))))));
+((max_income) : (NAT));
+not(((ran(incomes)) = ({})));
+((((ran(incomes)) /\ (NATURAL))) : (FIN(NATURAL)));
+((min_income) : (NAT));
+((((ran(incomes)) /\ ((INTEGER - NATURAL)))) : (FIN(INTEGER)))
+END
+&
+THEORY EnumerateX
+END

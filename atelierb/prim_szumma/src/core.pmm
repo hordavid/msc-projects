@@ -1,0 +1,10 @@
+THEORY User_Pass IS
+Operation(Initialisation) & Pattern((1..10)*{1} : 1..10 +-> 1..100) 
+	& ff(0) & pr;
+Operation(Initialisation) & Pattern(dom((1..10)*{1}) = 1..10) 
+	& ff(0) & pr;
+Operation(Initialisation) & Pattern(0 : 0..10) 
+	& ff(0) & pr;
+Operation(Initialisation) & Pattern(0 : 0..1000) 
+	& ff(0) & pr
+END 

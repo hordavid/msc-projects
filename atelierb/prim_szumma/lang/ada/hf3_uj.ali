@@ -1,0 +1,45 @@
+V "GNAT Lib v4.6"
+M P AB W=b
+P ZX
+R nnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+
+U hf3_uj%b		hf3_uj.adb		6443d883 NE OO SU IL
+W adder%s		adder.adb		adder.ali
+W basic_io%s		basic_io.adb		basic_io.ali
+W core%s		core.adb		core.ali
+W counter%s		counter.adb		counter.ali
+W main%s		main.adb		main.ali
+
+D adder.ads		20160514010314 30cb03da
+D basic_io.ads		20160514010314 d8d25709
+D core.ads		20160514010314 002acb70
+D counter.ads		20160514010314 4469ce9a
+D hf3_uj.adb		20160514010314 cfdfd9dc
+D main.ads		20160514010314 07c65066
+D sets.ads		20160514010314 62486afe
+D system.ads		20140416172229 23e1f70b
+D unchconv.ads		20070406091342 ca2f9e18
+X 1 adder.ads
+19K9*adder 39e10 5|11w6
+X 2 basic_io.ads
+19K9*BASIC_IO 52e13 5|8w6
+29P14*PTR_BASIC_IO(23R14)
+X 3 core.ads
+25K9*core 82e9 5|9w6 21r9
+40P14*PTR_core(27R14)
+46U19*SET_BASIC_IO 5|21s14
+X 4 counter.ads
+19K9*counter 39e12 5|10w6
+X 5 hf3_uj.adb
+12U11*hf3_uj 12b11 28l5 28t11
+13p9 this{6|30P14} 16m9 18r22 21r27 21r42 24r29 26r22
+X 6 main.ads
+21K9*main 5|7w6 13r16 16r21 18r9 24r9 26r9 6|41e9
+23R14*TYPE_main 5|16r26 6|29e20
+27p17*ref_BASIC_IO{2|29P14} 5|21r47
+28p17*ref_core{3|40P14} 5|21r32
+30P14*PTR_main(23R14) 5|13r21
+34U19*IMPORTS 5|18s14
+35U19*INITIALISATION 5|24s14
+39U19*main_op 5|26s14
+

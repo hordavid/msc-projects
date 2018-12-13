@@ -1,0 +1,16 @@
+-- WARNING : some components of this project have not been fully proved
+-- THERE ARE THEREFORE NO GUARANTEES ABOUT THIS FILE
+package sets is
+	-- Builtin functions
+	function succ(x : in INTEGER) return INTEGER ;
+	function pred(x : in INTEGER) return INTEGER ;
+	function bool(x : in BOOLEAN) return BOOLEAN ;
+	-- Builtin constants
+	MAXINT : constant INTEGER := 2147483647 ;
+	MININT : constant INTEGER := -2147483647 ;
+	-- Array types from machine ma
+	type #ma#sets#T_1 is array (1..5) of BOOLEAN ;
+	type #ma#sets#T_4 is array (1..5) of INTEGER ;
+	-- Builtin functions are inlined for efficiency
+	pragma inline(succ, pred, bool) ;
+end sets ;
