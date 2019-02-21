@@ -68,6 +68,21 @@ std::ostream& operator<<(std::ostream& s, const Tile& t)
 */
 std::istream& operator>>(std::istream& s, Map& m)
 {
+    s >> m.rows_ >> m.cols_;
+
+    m.map_.resize(m.rows());
+    for (int r = 0; r < m.rows(); r++)
+    {
+        m.map_[r].resize(m.cols());
+        for (int c = 0; c < m.cols(); c++)
+        {
+            int f_ind;
+            s >> f_ind;
+
+            m.map_[r][c] = field_from_int(f_ind);
+        }
+    }
+
     return s;
 }
 
