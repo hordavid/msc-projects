@@ -124,7 +124,7 @@ void Map::set_tile(const int i, const int j, const FIELD f)
 {
     if (in_range(i, j))
     {
-        map_[i][j] = f;
+        this->set_tile(Coordinate(i, j), f);
     }
 }
 
