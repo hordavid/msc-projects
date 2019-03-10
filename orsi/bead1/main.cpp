@@ -2,12 +2,11 @@
 #include <fstream>
 #include <numeric>
 #include <algorithm>
-#include <thread>
 #include <future>
 
 
 std::vector<Coordinate> get_coordinates(std::ifstream &in, const int c);
-void psum(const Map &m, const Coordinate &c, const int r, std::promise<int> *p);
+int psum(const Map &m, const Coordinate &c, const int r);
 
 
 int main(int argc, char** argv)
@@ -27,19 +26,12 @@ int main(int argc, char** argv)
     in.close();
     
 
+    std::vector<std::future<int>> fs;
     std::ofstream out("output.txt");
-    std::vector<std::thread> ts;
 
-    for (const auto &c : cs)
-    {
-        std::promise<int> p;
-        std::future<int> f = p.get_future();
-        ts.push_back(std::thread(psum, m, c, r, &p));
+    std::for_each(cs.begin(), cs.end(), [&](Coordinate &c) { fs.push_back(std::async(std::launch::async, psum, std::ref(m), std::ref(c), r)); });
 
-        out << f.get() << std::endl;
-    }
-
-    std::for_each(ts.begin(), ts.end(), [](std::thread &t) { t.join(); });
+    std::for_each(fs.begin(), fs.end(), [&](std::future<int> &f) { out << f.get() << std::endl; });
 
     out.clear();
     out.close();
@@ -65,9 +57,9 @@ std::vector<Coordinate> get_coordinates(std::ifstream &in, const int c)
     return cs;
 }
 
-void psum(const Map &m, const Coordinate &c, const int r, std::promise<int> *p) 
+int psum(const Map &m, const Coordinate &c, const int r) 
 {
     std::set<Tile> s = m.get_tiles_in_radius(c.x, c.y, r);
 
-    p->set_value(std::accumulate(s.begin(), s.end(), 0, [](int x, const Tile &t) { return x + field_value(t.second); }));
+    return std::accumulate(s.begin(), s.end(), 0, [](int x, const Tile &t) { return x + field_value(t.second); });
 }

@@ -2,6 +2,10 @@
 #include <iostream>
 
 
+const static DIRECTION directions[] = {DIRECTION::NORTH, DIRECTION::SOUTH,
+            DIRECTION::NORTH_EAST, DIRECTION::NORTH_WEST,
+            DIRECTION::SOUTH_EAST, DIRECTION::SOUTH_WEST};
+
 FIELD field_from_int(const int i)
 {
     return static_cast<FIELD>(i);
@@ -159,11 +163,7 @@ std::set<Tile> Map::get_tiles_in_radius(const int i, const int j, const int r) c
 
     if (0 < r)
     {
-        const DIRECTION ds[] = {DIRECTION::NORTH, DIRECTION::SOUTH,
-            DIRECTION::NORTH_EAST, DIRECTION::NORTH_WEST,
-            DIRECTION::SOUTH_EAST, DIRECTION::SOUTH_WEST};
-
-        for (const auto &d: ds)
+        for (const auto &d: directions)
         {
             const Coordinate c = std::get<0>(tile_in_direction(i, j, d));
 
