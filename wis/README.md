@@ -10,3 +10,4 @@
     * __pymongo__ for MongoDB connection
     * __spyne__ for SOAP web service
     * __lxml__ for SOAP XML based messages
+    * __requests__ for SOA Client that communicates microservices
