@@ -27,6 +27,6 @@ if __name__ == '__main__':
     service = WsgiApplication(soap_ws_app)
 
     server = make_server(host=HOST, port=PORT, app=service)
-    print('Soap Microservice running at port {}'.format(PORT))
+    logging.info('SOAP Microservice running at port {}'.format(PORT))
 
     server.serve_forever()
