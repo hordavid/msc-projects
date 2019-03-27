@@ -1,4 +1,6 @@
+import sys
 import logging
+import argparse
 
 from spyne import Application
 from spyne.protocol.http import HttpRpc
@@ -9,24 +11,38 @@ from wsgiref.simple_server import make_server
 from web_service.ShopSoapWebService import ShopSoapWebService
 
 
-HOST = 'localhost'
-PORT = 3000
-TARGET_NAMESPACE = 'simple.shop.soap.microservice'
+def parse_args(args=None):
+    parser = argparse.ArgumentParser(description='Script to parse SOAP Microservice command line arguments')
+    parser.add_argument('-H', '--host',
+                        help='Host ip address',
+                        default='localhost')
+    parser.add_argument('-p', '--port',
+                        help='Port of the web server',
+                        default='3000')
+
+    return parser.parse_args(args)
 
 
 soap_ws_app = Application(
     [ShopSoapWebService],
-    tns=TARGET_NAMESPACE,
+    tns='simple.shop.soap.microservice',
     in_protocol=HttpRpc(validator='soft'),
     out_protocol=Soap11()
 )
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
-    service = WsgiApplication(soap_ws_app)
+    try:
+        args = parse_args(args=sys.argv[1:])
+        logging.basicConfig(level=logging.INFO)
 
-    server = make_server(host=HOST, port=PORT, app=service)
-    logging.info('SOAP Microservice running at port {}'.format(PORT))
+        service = WsgiApplication(soap_ws_app)
 
-    server.serve_forever()
+        server = make_server(host=args.host, port=int(args.port), app=service)
+        logging.info('SOAP Microservice running at port {}'.format(args.port))
+
+        server.serve_forever()
+    except KeyboardInterrupt as interrupt:
+        logging.error('SOAP Microservice shutdown forced.')
+    except Exception as e:
+        logging.error('Fatal error! {}'.format(str(e)))

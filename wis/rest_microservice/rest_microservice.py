@@ -1,3 +1,5 @@
+import sys
+import argparse
 import logging
 
 from flask import Flask
@@ -10,8 +12,17 @@ from resource.ProductRestResource import GetProductById
 from resource.ProductRestResource import DeleteProductById
 
 
-HOST = 'localhost'
-PORT = 3003
+def parse_args(args=None):
+    parser = argparse.ArgumentParser(description='Script to parse SOAP Microservice command line arguments')
+    parser.add_argument('-H', '--host',
+                        help='Host ip address',
+                        default='localhost')
+    parser.add_argument('-p', '--port',
+                        help='Port of the web server',
+                        default='3003')
+
+    return parser.parse_args(args)
+
 
 server = Flask(__name__)
 rest_api = Api(server)
@@ -25,6 +36,12 @@ rest_api.add_resource(DeleteProductById, '/shop/product/delete/<int:product_id>'
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
+    try:
+        args = parse_args(args=sys.argv[:1])
+        logging.basicConfig(level=logging.INFO)
 
-    server.run(host=HOST, port= PORT, debug=True)
+        server.run(host=args.host, port=int(args.port), debug=True)
+    except KeyboardInterrupt as interrupt:
+        logging.error('REST Microservice shutdown forced.')
+    except Exception as e:
+        logging.error('Fatal error! {}'.format(str(e)))
