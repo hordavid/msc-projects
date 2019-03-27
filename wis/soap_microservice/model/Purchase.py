@@ -4,7 +4,7 @@ from spyne import Integer
 from spyne import DateTime
 
 
-class User(ComplexModel):
+class Purchase(ComplexModel):
     product_id = Long
     user_id = Long
     quantity = Integer
@@ -12,7 +12,7 @@ class User(ComplexModel):
     date = DateTime
 
     def __init__(self, product_id, user_id, quantity, price, date):
-        super(User, self).__init__()
+        super(Purchase, self).__init__()
 
         self.product_id = product_id
         self.user_id = user_id
