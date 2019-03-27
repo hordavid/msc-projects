@@ -4,6 +4,8 @@ from flask import Flask
 from flask_restful import Api
 
 from resource.ProductRestResource import GetProducts
+from resource.ProductRestResource import CreateProduct
+from resource.ProductRestResource import UpdateProduct
 from resource.ProductRestResource import GetProductById
 from resource.ProductRestResource import DeleteProductById
 
@@ -16,6 +18,8 @@ rest_api = Api(server)
 
 
 rest_api.add_resource(GetProducts, '/shop/product/list')
+rest_api.add_resource(CreateProduct, '/shop/product/create')
+rest_api.add_resource(UpdateProduct, '/shop/product/update')
 rest_api.add_resource(GetProductById, '/shop/product/get/<int:product_id>')
 rest_api.add_resource(DeleteProductById, '/shop/product/delete/<int:product_id>')
 

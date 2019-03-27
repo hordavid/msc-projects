@@ -31,13 +31,13 @@ def create_product(name, description, quantity, price):
         'quantity': quantity
     })
 
-# Add some product to shop database by product id
-#def add_products(product_id, quantity):
-#    database.product.update_one({'product_id': product_id}, {'$inc': {'quantity': quantity}})
-
 # Update one specified product in shop database by product_id
 def update_product(product_id, name, description, quantity, price):
-    database.product.update_one({'product_id': product_id}, {'name':name, 'description': description, 'quantity': quantity, 'price': price})
+    database.product.update_one({'product_id': product_id},
+                                {'name':name,
+                                 'description': description,
+                                 'quantity': quantity,
+                                 'price': price})
 
 # Delete product in shop database by product id
 def delete_product(product_id):
