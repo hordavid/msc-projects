@@ -21,7 +21,7 @@ class DeleteProductById(Resource):
 
     def get(self, product_id):
         shop_dao.delete_product(product_id=product_id)
-        return '', 200
+        return 'delete success', 200
 
 
 class CreateProduct(Resource):
@@ -32,7 +32,7 @@ class CreateProduct(Resource):
                                 description=payload['description'],
                                 quantity=payload['quantity'],
                                 price=payload['price'])
-        return '', 200
+        return 'product created', 200
 
 class UpdateProduct(Resource):
 
@@ -43,4 +43,4 @@ class UpdateProduct(Resource):
                                 description=payload['description'],
                                 quantity=payload['quantity'],
                                 price=payload['price'])
-        return '', 200
+        return 'update success', 200

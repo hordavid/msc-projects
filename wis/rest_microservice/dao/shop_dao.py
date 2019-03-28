@@ -9,9 +9,14 @@ mongoClient = pymongo.MongoClient(port=27017)
 database = mongoClient.shop
 
 
+product_id_sequence = 20
+
+
 # Generate id of new product
 def get_new_product_id():
-    return random.randint(20, 10000000)
+    global product_id_sequence
+    product_id_sequence += 1
+    return product_id_sequence
 
 # Get product from shop database by product id
 def get_product(product_id):

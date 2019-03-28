@@ -1,4 +1,3 @@
-import sys
 import argparse
 import logging
 
@@ -12,8 +11,8 @@ from resource.ProductRestResource import GetProductById
 from resource.ProductRestResource import DeleteProductById
 
 
-def parse_args(args=None):
-    parser = argparse.ArgumentParser(description='Script to parse SOAP Microservice command line arguments')
+def parse_args():
+    parser = argparse.ArgumentParser(description='Script to parse REST Microservice command line arguments')
     parser.add_argument('-H', '--host',
                         help='Host ip address',
                         default='localhost')
@@ -21,7 +20,7 @@ def parse_args(args=None):
                         help='Port of the web server',
                         default='3003')
 
-    return parser.parse_args(args)
+    return parser.parse_args()
 
 
 server = Flask(__name__)
@@ -37,7 +36,7 @@ rest_api.add_resource(DeleteProductById, '/shop/product/delete/<int:product_id>'
 
 if __name__ == '__main__':
     try:
-        args = parse_args(args=sys.argv[:1])
+        args = parse_args()
         logging.basicConfig(level=logging.INFO)
 
         server.run(host=args.host, port=int(args.port), debug=True)

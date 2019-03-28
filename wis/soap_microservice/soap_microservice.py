@@ -1,4 +1,3 @@
-import sys
 import logging
 import argparse
 
@@ -11,7 +10,7 @@ from wsgiref.simple_server import make_server
 from web_service.ShopSoapWebService import ShopSoapWebService
 
 
-def parse_args(args=None):
+def parse_args():
     parser = argparse.ArgumentParser(description='Script to parse SOAP Microservice command line arguments')
     parser.add_argument('-H', '--host',
                         help='Host ip address',
@@ -20,7 +19,7 @@ def parse_args(args=None):
                         help='Port of the web server',
                         default='3000')
 
-    return parser.parse_args(args)
+    return parser.parse_args()
 
 
 soap_ws_app = Application(
@@ -33,7 +32,7 @@ soap_ws_app = Application(
 
 if __name__ == '__main__':
     try:
-        args = parse_args(args=sys.argv[1:])
+        args = parse_args()
         logging.basicConfig(level=logging.INFO)
 
         service = WsgiApplication(soap_ws_app)

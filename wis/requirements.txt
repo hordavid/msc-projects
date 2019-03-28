@@ -3,4 +3,5 @@ spyne==2.12.16
 lxml==4.3.3
 flask==0.12.2
 flask-restful==0.3.7
+zeep==3.3.1
 requests==2.18.3

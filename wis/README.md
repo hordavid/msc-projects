@@ -12,4 +12,5 @@
     * __lxml__ is a SOAP XML based message support library for Python
     * __flask__ is a microframework for Python
     * __flask-restful__ is an extension for Flask that adds support for building REST APIs
+    * __zeep__ is a fast and modern Python SOAP client
     * __requests__ is an elegant and simple HTTP library for Python
