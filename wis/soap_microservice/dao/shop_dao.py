@@ -34,6 +34,8 @@ def purchase(product_id, user_id, quantity):
     if product is None or user is None:
         return False
 
+    database.product.update_one({'product_id': product_id}, {'$set': {'quantity': product['quantity'] - quantity}})
+
     database.purchase.insert_one({
         'product_id': product_id,
         'user_id': user_id,

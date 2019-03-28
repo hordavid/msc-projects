@@ -1,4 +1,5 @@
 import json
+import random
 import argparse
 import requests
 import logging
@@ -54,11 +55,17 @@ def test_soap_microservice(wsdl_url):
     client = Client(wsdl_url)
 
     logging.info("Get users from shop database")
-    result = client.service.get_users()
-    logging.info('users = {}'.format(result))
-    logging.info('Get users response: {}'.format(result))
+    users = client.service.get_users()
+    logging.info('Get users response: {}'.format(users))
 
+    logging.info('Generate purchase of all user')
+    for user in users:
+        random_product_id = random.randint(1, 10)
+        client.service.purchase(product_id=random_product_id, user_id=user['user_id'], quantity=random.randint(1, 15))
 
+    logging.info("Get Purchases from shop database")
+    purchases = client.service.get_purchases()
+    logging.info('Get Purchases response: {}'.format(purchases))
 
 def main():
     logging.info('SOA Client running...')

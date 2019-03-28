@@ -1,5 +1,6 @@
 from spyne import ComplexModel
 from spyne import Long
+from spyne import Float
 from spyne import Integer
 from spyne import DateTime
 
@@ -8,7 +9,7 @@ class Purchase(ComplexModel):
     product_id = Long
     user_id = Long
     quantity = Integer
-    price = Long
+    price = Float
     date = DateTime
 
     def __init__(self, product_id, user_id, quantity, price, date):

@@ -25,7 +25,7 @@ def parse_args():
 soap_ws_app = Application(
     [ShopSoapWebService],
     tns='simple.shop.soap.microservice',
-    in_protocol=HttpRpc(validator='soft'),
+    in_protocol=Soap11(validator='soft'),
     out_protocol=Soap11()
 )
 
