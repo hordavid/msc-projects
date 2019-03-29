@@ -22,7 +22,7 @@
 * Install MongoDB Server and MongoDB Compass Community versions
 * Install Python packages
     ```$> pip install requirements.txt```
-* Create ```shop``` database in Compass
+* Create ```shop``` database with Compass
 * Create ```user```, ```product``` and ```purchase``` collections into shop database
 
 
