@@ -255,7 +255,7 @@ bool sort_by_y(const City& c1, const City& c2)
 
 FlightPath Map::get_shortest_flightpath() const
 {	
-	std::vector<City> x_cities(cities_.begin(), cities_.end());
+    std::vector<City> x_cities(cities_.begin(), cities_.end());
     std::vector<City> y_cities(cities_.begin(), cities_.end());
 	
     std::sort(x_cities.begin(), x_cities.end(), sort_by_x);
