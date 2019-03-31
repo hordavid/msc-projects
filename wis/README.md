@@ -14,3 +14,26 @@
     * __flask-restful__ is an extension for Flask that adds support for building REST APIs
     * __zeep__ is a fast and modern Python SOAP client
     * __requests__ is an elegant and simple HTTP library for Python
+
+
+#### Install
+
+* Install Python 3.6 interpreter
+* Install MongoDB Server and MongoDB Compass Community versions
+* Install Python packages
+    ```$> pip install requirements.txt```
+* Create ```shop``` database with Compass
+* Create ```user```, ```product``` and ```purchase``` collections into shop database
+
+
+#### Running the simple SOA environment
+
+* Open the ```wis``` folder
+* Run ```db_init.py``` script
+    ```$>python db_init.py```
+* Start REST Microservice
+    ```$>python rest_microservice/rest_microservice.py```
+* Start SOAP Microservice
+    ```$>python soap_microservice/soap_microservice.py```
+* Start SOA Client for testing microservices
+    ```$>python soa_client.py```
