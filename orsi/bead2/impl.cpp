@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <future>
 
 
 const static DIRECTION directions[] = {DIRECTION::NORTH, DIRECTION::SOUTH,

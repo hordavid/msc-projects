@@ -1,8 +1,6 @@
 #include "types.hpp"
 #include <fstream>
-#include <numeric>
 #include <algorithm>
-#include <future>
 
 
 int main(int argc, char** argv)
