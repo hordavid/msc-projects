@@ -241,7 +241,32 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
         return closest_brute_force(x_cities);
     }
 
-	return closest_brute_force(x_cities);
+    const std::vector<City> on_left_x(x_cities.begin(), x_cities.begin() + ((x_cities.size() / 2) - 1));
+    const std::vector<City> on_right_x(x_cities.begin() + (x_cities.size() / 2), x_cities.end());
+    const int middle_x = on_right_x[0].x;
+
+    std::vector<City> on_left_y;
+    std::vector<City> on_right_y;
+    for (auto &c : y_cities)
+    {
+        if (middle_x > c.x)
+        {
+            on_left_y.push_back(c);
+        }
+        else
+        {
+            on_right_y.push_back(c);
+        }
+    }
+
+    std::future<FlightPath> ffp = std::async(std::launch::async, [&]() {return find_shortest(on_left_x, on_left_y);});
+
+    FlightPath fp_right = find_shortest(on_right_x, on_right_y);
+    FlightPath fp_left = ffp.get();
+
+    FlightPath min_path = get_length(fp_left) < get_length(fp_right) ? fp_left : fp_right;
+
+	return min_path;
 }
 
 bool sort_by_x(const City& c1, const City& c2)
