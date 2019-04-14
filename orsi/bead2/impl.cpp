@@ -249,7 +249,7 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
     std::vector<City> on_right_y;
     for (auto &c : y_cities)
     {
-        if (middle_x > c.x)
+        if (middle_x >= c.x)
         {
             on_left_y.push_back(c);
         }
@@ -265,6 +265,29 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
     FlightPath fp_left = ffp.get();
 
     FlightPath min_path = get_length(fp_left) < get_length(fp_right) ? fp_left : fp_right;
+
+    std::vector<City> stripe;
+    for (auto &c : y_cities)
+    {
+        if (std::abs(middle_x - c.x) < get_length(min_path))
+        {
+            stripe.push_back(c);
+        }
+    }
+
+    if (stripe.size() > 1)
+    {
+        for (auto &from : stripe)
+        {
+            for (auto &to : stripe)
+            {
+                if (from < to && get_distance(from, to) < get_length(min_path))
+                {
+                    min_path = FlightPath(from, to);
+                }
+            }
+        }
+    }
 
 	return min_path;
 }

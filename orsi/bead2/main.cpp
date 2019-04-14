@@ -18,8 +18,13 @@ int main(int argc, char** argv)
 
     const FlightPath fp(m.get_shortest_flightpath());
 
-    out << "From: (" << fp.first.x << "," << fp.first.y << ")" << std::endl;
-    out << "To: (" << fp.second.x << "," << fp.second.y << ")" << std::endl;
+    const bool b = Coordinate(fp.first.x, fp.first.y) < Coordinate(fp.second.x, fp.second.y);
+
+    City from = b ? fp.first : fp.second;
+    City to = !b ? fp.first : fp.second;
+
+    out << "From: (" << from.x << "," << from.y << ")" << std::endl;
+    out << "To: (" << to.x << "," << to.y << ")" << std::endl;
 
     out.clear();
     out.close();
