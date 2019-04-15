@@ -14,8 +14,6 @@ int main(int argc, char** argv)
     in.close();
     
 
-    std::ofstream out("output.txt");
-
     const FlightPath fp(m.get_shortest_flightpath());
 
     const bool b = Coordinate(fp.first.x, fp.first.y) < Coordinate(fp.second.x, fp.second.y);
@@ -23,6 +21,8 @@ int main(int argc, char** argv)
     City from = b ? fp.first : fp.second;
     City to = !b ? fp.first : fp.second;
 
+    std::ofstream out("output.txt");
+    
     out << "From: (" << from.x << "," << from.y << ")" << std::endl;
     out << "To: (" << to.x << "," << to.y << ")" << std::endl;
 

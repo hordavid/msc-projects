@@ -241,7 +241,7 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
         return closest_brute_force(x_cities);
     }
 
-    const std::vector<City> on_left_x(x_cities.begin(), x_cities.begin() + ((x_cities.size() / 2) - 1));
+    const std::vector<City> on_left_x(x_cities.begin(), x_cities.begin() + (x_cities.size() / 2));
     const std::vector<City> on_right_x(x_cities.begin() + (x_cities.size() / 2), x_cities.end());
     const int middle_x = on_right_x[0].x;
 
@@ -249,7 +249,8 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
     std::vector<City> on_right_y;
     for (auto &c : y_cities)
     {
-        if (middle_x >= c.x)
+
+        if (c.x <= middle_x)
         {
             on_left_y.push_back(c);
         }
@@ -281,7 +282,7 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
         {
             for (auto &to : stripe)
             {
-                if (from < to && get_distance(from, to) < get_length(min_path))
+                if (get_distance(from, to) < get_length(min_path))
                 {
                     min_path = FlightPath(from, to);
                 }
@@ -308,7 +309,7 @@ FlightPath Map::get_shortest_flightpath() const
     std::vector<City> y_cities(cities_.begin(), cities_.end());
 	
     std::sort(x_cities.begin(), x_cities.end(), sort_by_x);
-    std:sort(y_cities.begin(), y_cities.end(), sort_by_y);
+    std::sort(y_cities.begin(), y_cities.end(), sort_by_y);
     
     return find_shortest(x_cities, y_cities);
 }
