@@ -22,7 +22,7 @@ int main(int argc, char** argv)
     City to = !b ? fp.first : fp.second;
 
     std::ofstream out("output.txt");
-    
+
     out << "From: (" << from.x << "," << from.y << ")" << std::endl;
     out << "To: (" << to.x << "," << to.y << ")" << std::endl;
 

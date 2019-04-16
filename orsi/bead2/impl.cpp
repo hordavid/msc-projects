@@ -219,11 +219,14 @@ FlightPath Map::closest_brute_force(const std::vector<City>& cities) const
 {
     FlightPath fp(cities[0], cities[1]);
 
-    for (auto &from : cities)
+    for (int i = 0; i < cities.size() - 1; i++)
     {
-        for (auto &to : cities)
+        for (int j = i + 1; j < cities.size(); j++)
         {
-            if (from < to && get_distance(fp.first, fp.second) > get_distance(from, to))
+            const City from = cities[i];
+            const City to = cities[j];
+
+            if (get_distance(fp.first, fp.second) > get_distance(from, to))
             {
                 fp.first = from;
                 fp.second = to;
@@ -247,9 +250,8 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
 
     std::vector<City> on_left_y;
     std::vector<City> on_right_y;
-    for (auto &c : y_cities)
+    for (const auto &c : y_cities)
     {
-
         if (c.x <= middle_x)
         {
             on_left_y.push_back(c);
@@ -263,12 +265,13 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
     std::future<FlightPath> ffp = std::async(std::launch::async, [&]() {return find_shortest(on_left_x, on_left_y);});
 
     FlightPath fp_right = find_shortest(on_right_x, on_right_y);
+
     FlightPath fp_left = ffp.get();
 
     FlightPath min_path = get_length(fp_left) < get_length(fp_right) ? fp_left : fp_right;
 
     std::vector<City> stripe;
-    for (auto &c : y_cities)
+    for (const auto &c : y_cities)
     {
         if (std::abs(middle_x - c.x) < get_length(min_path))
         {
@@ -278,10 +281,13 @@ FlightPath Map::find_shortest(const std::vector<City>& x_cities, const std::vect
 
     if (stripe.size() > 1)
     {
-        for (auto &from : stripe)
+        for (int i = 0; i < stripe.size() - 1; i++)
         {
-            for (auto &to : stripe)
+            for (int j = i + 1; j < stripe.size(); j++)
             {
+                const City from = stripe[i];
+                const City to = stripe[j];
+
                 if (get_distance(from, to) < get_length(min_path))
                 {
                     min_path = FlightPath(from, to);
